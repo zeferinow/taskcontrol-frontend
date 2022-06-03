@@ -1,0 +1,90 @@
+@import '~src/styles/settings/index';
+
+.o-toolbar-button__icon {
+  margin-right: var(--spacing-xxsm);
+  font-size: 1.3rem;
+}
+
+.o-btn-secondary {
+  color: var(--color-white) !important;
+  background-color: var(--color-secondary) !important;
+  background-image: none !important;
+  border: 1px solid #{var(--color-secondary)} !important;
+}
+
+.o-btn-outline-secondary {
+  color: var(--color-secondary) !important;
+  background-color: var(--color-white) !important;
+  background-image: none !important;
+  border: 1px solid #{var(--color-secondary)} !important;
+
+  &:disabled {
+    background-color: var(--color-disabled) !important;
+    border-color: var(--color-disabled) !important;
+  }
+}
+
+.o-btn-outline-default {
+  color: var(--color-font) !important;
+  background-color: var(--color-white) !important;
+  background-image: none !important;
+  border: 1px solid var(--color-font) !important;
+
+  &:hover {
+    color: var(--color-font-light-2) !important;
+    border-color: var(--color-font-light-2) !important;
+  }
+
+  &:disabled {
+    background-color: var(--color-disabled) !important;
+    border-color: var(--color-disabled) !important;
+  }
+}
+
+.o-btn-outline-info {
+  color: var(--color-info) !important;
+  background-color: var(--color-white) !important;
+  background-image: none !important;
+  border: 1px solid var(--color-info) !important;
+
+  &:hover {
+    color: var(--color-info-light-2) !important;
+    border-color: var(--color-info-light-2) !important;
+  }
+  &:disabled {
+    color: var(--color-disabled) !important;
+    border-color: var(--color-disabled) !important;
+  }
+}
+
+.o-btn-outline-success {
+  color: var(--color-success) !important;
+  background-color: var(--color-white) !important;
+  background-image: none !important;
+  border: 1px solid var(--color-success) !important;
+
+  &:hover {
+    color: var(--color-success-light-2) !important;
+    border-color: var(--color-success-light-2) !important;
+  }
+  &:disabled {
+    color: var(--color-disabled) !important;
+    border-color: var(--color-disabled) !important;
+  }
+}
+
+.o-btn-outline-danger {
+  color: var(--color-danger) !important;
+  background-color: var(--color-white) !important;
+  background-image: none !important;
+  border: 1px solid var(--color-danger) !important;
+
+  &:hover {
+    color: var(--color-danger-light-2) !important;
+    border-color: var(--color-danger-light-2) !important;
+  }
+  &:disabled {
+    color: var(--color-disabled) !important;
+    border-color: var(--color-disabled) !important;
+  }
+}

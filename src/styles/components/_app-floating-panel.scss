@@ -1,0 +1,89 @@
+@import '~src/styles/settings/index';
+
+$panel-bg-color: #fff;
+$panel-border-radius: 3px;
+$arrow-bg-color: $panel-bg-color;
+$arrow-height-width: 5px;
+$arrow-trigger-distance: 2px;
+
+.c-floating-panel__panel-container {
+  position: relative;
+  background-color: transparent;
+  z-index: var(--dropdowns-z-index);
+}
+
+.c-floating-panel__panel {
+  background-color: $panel-bg-color;
+  border-radius: $panel-border-radius;
+  overflow: hidden;
+}
+
+.c-floating-panel__arrow {
+  --c-floating-panel__arrow-color: #{$panel-bg-color};
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: var(--c-floating-panel__arrow-color);
+  position: absolute;
+  margin: $arrow-height-width;
+}
+
+.c-floating-panel--no-arrow {
+  margin: 0 !important;
+}
+
+.c-floating-panel__panel-container[x-placement^='top'] .c-floating-panel__arrow {
+  border-width: $arrow-height-width $arrow-height-width 0 $arrow-height-width;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  bottom: -$arrow-height-width;
+  left: calc(50% - #{$arrow-height-width});
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.c-floating-panel__panel-container[x-placement^='top'] {
+  margin-bottom: $arrow-height-width + $arrow-trigger-distance;
+}
+
+.c-floating-panel__panel-container[x-placement^='right'] .c-floating-panel__arrow {
+  border-width: $arrow-height-width $arrow-height-width $arrow-height-width 0;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  left: -$arrow-height-width;
+  top: calc(50% - #{$arrow-height-width});
+  margin-left: 0;
+  margin-right: 0;
+}
+.c-floating-panel__panel-container[x-placement^='right'] {
+  margin-left: $arrow-height-width + $arrow-trigger-distance;
+}
+
+.c-floating-panel__panel-container[x-placement^='bottom'] .c-floating-panel__arrow {
+  border-width: 0 $arrow-height-width $arrow-height-width $arrow-height-width;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  top: -$arrow-height-width;
+  left: calc(50% - #{$arrow-height-width});
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.c-floating-panel__panel-container[x-placement^='bottom'] {
+  margin-top: $arrow-height-width + $arrow-trigger-distance;
+}
+
+.c-floating-panel__panel-container[x-placement^='left'] .c-floating-panel__arrow {
+  border-width: $arrow-height-width 0 $arrow-height-width $arrow-height-width;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  right: -$arrow-height-width;
+  top: calc(50% - #{$arrow-height-width});
+  margin-left: 0;
+  margin-right: 0;
+}
+.c-floating-panel__panel-container[x-placement^='left'] {
+  margin-right: $arrow-height-width + $arrow-trigger-distance;
+}

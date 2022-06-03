@@ -1,0 +1,83 @@
+@import '~src/styles/settings/index';
+@import '~@material/elevation/mixins';
+
+.m-grid__item.m-grid__item--fluid.m-wrapper {
+  min-height: var(--below-navbar-height);
+}
+
+.toast-container {
+  z-index: var(--toastrs-z-index) !important;
+}
+
+.m-portlet {
+  position: relative;
+  margin-bottom: var(--spacing-gutter);
+
+  &.m-portlet--bordered {
+    border: 1px solid var(--color-border);
+  }
+}
+
+.nav-link.dropdown-toggle:after,
+.btn.dropdown-toggle:after {
+  bottom: 2px;
+}
+
+.form-control[readonly],
+.form-control {
+  border-color: var(--color-border);
+}
+
+.form-control:focus {
+  border-color: var(--color-primary);
+}
+
+.form-control[disabled] {
+  border-color: var(--color-disabled);
+  background-color: var(--color-disabled);
+}
+
+.m-radio > input:disabled ~ span,
+.m-checkbox > input:disabled ~ span {
+  background-color: var(--color-disabled) !important;
+  opacity: 1;
+}
+
+.m-radio > span,
+.m-checkbox > span,
+.m-radio > input:checked ~ span,
+.m-checkbox > input:checked ~ span {
+  border: 1px solid var(--color-border);
+}
+
+.input-group .input-group-append > .input-group-text,
+.input-group .input-group-prepend > .input-group-text {
+  background-color: #{var(--color-white-dark-1)};
+  border-color: var(--color-border);
+}
+
+.input-group .input-group-append > .input-group-text > i,
+.input-group .input-group-prepend > .input-group-text > i {
+  color: var(--color-font);
+}
+
+.m-datatable > .m-datatable__table > .m-datatable__head .m-datatable__row > .m-datatable__cell,
+.m-datatable > .m-datatable__table > .m-datatable__foot .m-datatable__row > .m-datatable__cell {
+  background-color: #{var(--color-white-dark-1)};
+}
+
+.nav-link.active {
+  color: var(--color-primary) !important;
+}
+
+.nav-link.m-tabs__link.active,
+.nav-link.m-tabs__link:hover {
+  border-bottom-color: var(--color-primary) !important;
+}
+
+.m-portlet__head .m-portlet__head-caption .m-portlet__head-title .m-portlet__head-text {
+  font-size: var(--font-size-sub-title) !important;
+}
+.m-loader::before {
+  border-top-color: var(--color-primary) !important;
+}

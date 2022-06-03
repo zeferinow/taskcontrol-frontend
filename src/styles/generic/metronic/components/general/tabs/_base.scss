@@ -1,0 +1,23 @@
+//
+//** Base Tabs Component
+//
+
+//==== Component Mixins ====//
+
+//== Component Base
+@mixin m-build-component--tabs-base() {
+  .m-tabs-content {
+    .m-tabs-content__item {
+      display: none;
+
+      &.m-tabs-content__item--active {
+        display: block;
+      }
+    }
+  }
+}
+
+//==== Generate Component ====//
+
+//== Component Base
+@include m-build-component--tabs-base();

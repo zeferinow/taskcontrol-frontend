@@ -1,0 +1,15 @@
+/**
+
+  Configurações globais do projeto.
+  Este fonte deve conter APENAS variáveis ou verificações SASS.
+  Em outras palavras, não deve gerar nenhum CSS.
+
+**/
+@import 'colors';
+@import 'metronic/index';
+@import 'bootstrap-custom-settings';
+@import 'metronic-custom-settings';
+@import 'primeng-custom-settings';
+@import 'typeface';
+@import 'elevations';
+@import 'stacking';

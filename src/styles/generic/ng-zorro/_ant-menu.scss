@@ -1,0 +1,234 @@
+.ant-menu-inline-collapsed {
+  width: var(--side-nav-collapsed-size);
+}
+
+.ant-menu-inline-collapsed > .ant-menu-item,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
+.ant-menu-inline-collapsed
+  > .ant-menu-item-group
+  > .ant-menu-item-group-list
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+  padding: 0 var(--spacing-lg) !important;
+}
+
+.ant-menu-inline-collapsed > .ant-menu-item .anticon,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .anticon,
+.ant-menu-inline-collapsed
+  > .ant-menu-item-group
+  > .ant-menu-item-group-list
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title
+  .anticon,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon {
+  font-size: 24px;
+  display: flex;
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border: none;
+}
+
+.ant-menu-vertical > .ant-menu-item,
+.ant-menu-vertical-left > .ant-menu-item,
+.ant-menu-vertical-right > .ant-menu-item,
+.ant-menu-inline > .ant-menu-item,
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  line-height: 28px;
+}
+
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical-left .ant-menu-item,
+.ant-menu-vertical-right .ant-menu-item,
+.ant-menu-inline .ant-menu-item,
+.ant-menu-vertical .ant-menu-submenu-title,
+.ant-menu-vertical-left .ant-menu-submenu-title,
+.ant-menu-vertical-right .ant-menu-submenu-title,
+.ant-menu-inline .ant-menu-submenu-title {
+  height: 26px;
+  line-height: 26px;
+}
+
+.ant-menu-vertical .ant-menu-item,
+.ant-menu-vertical-left .ant-menu-item,
+.ant-menu-vertical-right .ant-menu-item,
+.ant-menu-inline .ant-menu-item {
+  margin-bottom: 4px;
+  outline: none;
+}
+
+.ant-menu-submenu-popup {
+  max-height: 300px;
+  overflow-y: auto;
+  box-shadow: 0px 7px 8px -4px rgba(176, 182, 212, 0.2), 0px 12px 17px 2px rgba(176, 182, 212, 0.14),
+    0px 5px 22px 4px rgba(176, 182, 212, 0.12);
+}
+
+.ant-menu-item:hover,
+.ant-menu-item-active,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover,
+.ant-menu-submenu-selected,
+.ant-menu-item-selected,
+.ant-menu-item-selected > a,
+.ant-menu-item-selected > a:hover,
+.ant-menu-item > a:hover,
+.ant-menu-vertical .ant-menu-submenu-selected,
+.ant-menu-vertical-left .ant-menu-submenu-selected,
+.ant-menu-vertical-right .ant-menu-submenu-selected {
+  color: var(--color-primary) !important;
+}
+
+.ant-menu-item > a {
+  color: var(--color-font);
+}
+
+.ant-menu {
+  color: var(--color-font);
+  transition: none;
+}
+
+.ant-menu-item:hover,
+.ant-menu-item-active,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover,
+.ant-menu-submenu-selected,
+.ant-menu-item-selected {
+  fill: var(--color-primary);
+  svg {
+    fill: var(--color-primary) !important;
+  }
+}
+
+.ant-menu-submenu-selected,
+.ant-menu-item-selected {
+  font-weight: bold;
+}
+
+.ant-menu-submenu:not(.ant-menu-submenu-selected),
+.ant-menu-item:not(.ant-menu-item-selected) {
+  font-weight: initial;
+}
+
+.ant-menu-item-selected > a,
+.ant-menu-item-selected > a:hover {
+  font-weight: initial;
+}
+
+.ant-menu-item:not(.ant-menu-item-selected) > a,
+.ant-menu-item:not(.ant-menu-item-selected) > a:hover {
+  font-weight: initial;
+}
+
+.ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary));
+}
+
+.ant-menu-submenu-vertical > .ant-menu-submenu-title .ant-menu-submenu-arrow,
+.ant-menu-submenu-vertical-left > .ant-menu-submenu-title .ant-menu-submenu-arrow,
+.ant-menu-submenu-vertical-right > .ant-menu-submenu-title .ant-menu-submenu-arrow,
+.ant-menu-submenu-inline > .ant-menu-submenu-title .ant-menu-submenu-arrow {
+  right: 11px;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: initial;
+}
+
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after {
+  border: none;
+}
+
+.ant-menu-vertical .ant-menu-item:not(:last-child),
+.ant-menu-vertical-left .ant-menu-item:not(:last-child),
+.ant-menu-vertical-right .ant-menu-item:not(:last-child),
+.ant-menu-inline .ant-menu-item:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.ant-menu-item:active,
+.ant-menu-submenu-title:active {
+  background-color: initial;
+}
+
+.ant-menu-inline-collapsed > .ant-menu-item .anticon + a,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .anticon + a,
+.ant-menu-inline-collapsed
+  > .ant-menu-item-group
+  > .ant-menu-item-group-list
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title
+  .anticon
+  + a,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .anticon + a {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+}
+
+.ant-menu-submenu,
+.ant-menu-item {
+  fill: var(--color-font);
+  transition: none;
+}
+
+.ant-menu-inline-collapsed > .ant-menu-item a,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item a,
+.ant-menu-inline-collapsed
+  > .ant-menu-item-group
+  > .ant-menu-item-group-list
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title
+  a,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title a {
+  display: inline-block;
+  max-width: 0;
+  opacity: 0;
+}
+
+.ant-menu-submenu-title > span[title] {
+  display: inline-flex;
+}
+
+.ant-menu-inline-collapsed > .ant-menu-item,
+.ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item,
+.ant-menu-inline-collapsed
+  > .ant-menu-item-group
+  > .ant-menu-item-group-list
+  > .ant-menu-submenu
+  > .ant-menu-submenu-title,
+.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+  justify-content: center;
+}
+
+.ant-menu-inline app-icon:not(.c-empty-state-icon) .anticon {
+  font-size: unset;
+  margin-right: var(--spacing-xxsm);
+}
+
+.ant-menu-submenu-title,
+.ant-menu-item .anticon,
+.ant-menu-submenu-title .anticon {
+  transition: none;
+}

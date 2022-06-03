@@ -1,0 +1,27 @@
+.c-ticket-visualization__label-tag {
+  background-color: transparent !important;
+  padding: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+}
+
+.c-ticket-visualization__label-tag--color-orange {
+  color: var(--color-orange) !important;
+  border-color: var(--color-orange);
+}
+.c-ticket-visualization__label-tag--color-primary-light-2 {
+  color: var(--color-primary-light-2) !important;
+  border-color: var(--color-primary-light-2);
+}
+.c-ticket-visualization__label-tag--color-yellow {
+  color: var(--color-yellow) !important;
+  border-color: var(--color-yellow);
+}
+.c-ticket-visualization__label-tag--color-gray {
+  color: var(--gray-color) !important;
+  border-color: var(--gray-color);
+}
+
+.c-ticket-visualization__label-tag--color-green {
+  color: var(--color-green) !important;
+  border-color: var(--color-green);
+}

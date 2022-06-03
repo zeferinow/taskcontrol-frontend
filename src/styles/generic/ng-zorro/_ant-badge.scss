@@ -1,0 +1,32 @@
+.ant-badge-multiple-words {
+  padding: 0 4px;
+}
+
+.ant-badge-count {
+  font-size: 9px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none;
+}
+
+.ant-badge--blue {
+  .ant-badge-count {
+    color: #ffffff;
+    background-color: var(--color-info);
+    border: 1px solid var(--color-info);
+  }
+}
+
+.ant-badge--inactive {
+  .ant-badge-count {
+    color: var(--color-secondary-light-1);
+    background-color: transparent;
+    border: 1px solid var(--color-secondary-light-1);
+  }
+}
+
+.ant-badge > span:first-child {
+  display: flex;
+}

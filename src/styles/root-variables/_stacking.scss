@@ -1,0 +1,22 @@
+@import '~src/styles/settings/stacking';
+
+:root {
+  --lower-z-index: #{$lower-z-index};
+  --normal-z-index: #{$normal-z-index};
+  --higher-z-index: #{$higher-z-index};
+  --max-z-index: #{$max-z-index};
+  --min-z-index: #{$min-z-index};
+  --toastrs-z-index: #{$toastrs-z-index};
+  --confirmation-dialog-z-index: #{$confirmation-dialog-z-index};
+  --dropdowns-z-index: #{$dropdowns-z-index};
+  --portlet-fullscreen-z-index: #{$portlet-fullscreen-z-index};
+  --instruction-modals-z-index: #{$instruction-modals-z-index};
+  --cdk-overlay-z-index: #{$cdk-overlay-z-index};
+  --chat-z-index: #{$chat-z-index};
+  --side-nav-z-index: #{$side-nav-z-index};
+  --overlays-z-index: #{$overlays-z-index};
+  --fabs-z-index: #{$fabs-z-index};
+
+  // Foi criado um com string porque ao pegar o numerico via getPropertyValue estava truncando o número
+  --fabs-z-index-string: '#{$fabs-z-index}';
+}

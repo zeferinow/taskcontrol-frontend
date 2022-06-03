@@ -1,0 +1,16 @@
+
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+.c-appointment-crud {
+  --col-b-height: 500px;
+}
+
+.c-appointment-crud__editor {
+  .ql-editor {
+    min-height: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+}

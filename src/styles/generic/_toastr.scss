@@ -1,0 +1,21 @@
+@import '~@material/elevation/mixins';
+
+.toast-success {
+  background-color: var(--color-success);
+}
+
+.toast-error {
+  background-color: var(--color-danger);
+}
+
+.toast-info {
+  background-color: var(--color-info);
+}
+
+.toast-warning {
+  background-color: var(--color-warning);
+}
+
+.toast-container .ngx-toastr {
+  @include mdc-elevation(12, $color-elevation-shadow);
+}

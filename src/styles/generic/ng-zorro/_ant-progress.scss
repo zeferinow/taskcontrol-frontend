@@ -1,0 +1,16 @@
+.ant-progress.ant-progress-line * {
+  display: flex;
+  align-items: center;
+  .ant-progress-text {
+    color: var(--color-font) !important;
+  }
+}
+
+.c-progress--hide-icon .ant-progress-text i.anticon {
+  display: none;
+}
+
+.c-progress--bold-percentage .ant-progress-text {
+  font-weight: bold;
+  width: auto;
+}

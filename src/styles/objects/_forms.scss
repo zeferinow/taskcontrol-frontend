@@ -1,0 +1,45 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.form-group-container {
+  @include make-row();
+  & > .form-group:not(.form-group--sm):not(.form-group--md):not(.form-group--lg):not(.form-group--xsm) {
+    @include make-col-ready();
+    @include make-col(12);
+  }
+}
+
+.form-group--sm,
+.form-group--md,
+.form-group--lg,
+.form-group--xsm {
+  @include make-col-ready();
+  @include make-col(12);
+}
+
+@include media-breakpoint-up(sm) {
+  .form-group--xsm,
+  .form-group--sm,
+  .form-group--md,
+  .form-group--lg {
+    flex-shrink: 0;
+    flex-grow: 1;
+  }
+  .form-group--xsm {
+    flex-basis: 125px;
+    min-width: 125px;
+  }
+  .form-group--sm {
+    flex-basis: 200px;
+    min-width: 200px;
+  }
+  .form-group--md {
+    flex-basis: 300px;
+    min-width: 50%;
+  }
+  .form-group--lg {
+    flex-basis: 800px;
+    min-width: 50%;
+  }
+}

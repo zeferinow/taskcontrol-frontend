@@ -1,0 +1,6 @@
+app-guest-list {
+  .guest-list--no-border-radius > app-dropdown > .select2-container > .selection > .select2-selection {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

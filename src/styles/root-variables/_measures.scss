@@ -1,0 +1,171 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+:root {
+  --root-line-height: 1.2;
+  --root-mobile-font-size: 13px;
+}
+
+@include media-breakpoint-up(lg) {
+  :root {
+    --navbar-height: calc(var(--navbar-height) + 10px);
+    --side-nav-icon-font-size: var(--font-size-11);
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  :root {
+    --navbar-height: calc(var(--navbar-height) - 10px);
+    --side-nav-icon-font-size: var(--font-size-11);
+  }
+}
+
+@include media-breakpoint-down(md) {
+  :root {
+    --root-font-size: var(--root-mobile-font-size);
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :root {
+    --root-font-size: 14px;
+  }
+}
+
+// font sizes
+// inspirado em https://www.lightningdesignsystem.com/design-tokens/#category-font-size
+:root {
+  --font-size-1: 0.7rem;
+  --font-size-2: 0.775rem;
+  --font-size-3: 0.85rem;
+  --font-size-4: 0.925rem;
+  --font-size-5: 1rem;
+  --font-size-6: 1.075rem;
+  --font-size-7: 1.15rem;
+  --font-size-8: 1.25rem;
+  --font-size-9: 1.5rem;
+  --font-size-10: 1.75rem;
+  --font-size-11: 2rem;
+  --font-size-12: 2.625rem;
+
+  --font-size-title: var(--font-size-9);
+  --font-size-sub-title: var(--font-size-7);
+
+  --font-size-xxxlg: var(--font-size-11);
+  --font-size-xxlg: var(--font-size-10);
+  --font-size-xlg: var(--font-size-9);
+  --font-size-lg: var(--font-size-7);
+  --font-size-md: var(--font-size-5);
+  --font-size-sm: var(--font-size-4);
+  --font-size-xsm: var(--font-size-3);
+  --font-size-xxsm: var(--font-size-2);
+  --font-size-xxxsm: var(--font-size-1);
+}
+
+// spacing
+// inspirado em https://www.lightningdesignsystem.com/design-tokens/#category-spacing
+:root {
+  --spacing-xxlg: 3rem;
+  --spacing-xlg: 2rem;
+  --spacing-lg: 1.5rem;
+  --spacing-md: 1rem;
+  --spacing-sm: 0.75rem;
+  --spacing-xsm: 0.5rem;
+  --spacing-xxsm: 0.25rem;
+  --spacing-xxxsm: 0.125rem;
+  --spacing-gutter: 0.9rem;
+}
+
+//forms
+:root {
+  --form-control-pad-top-bot: calc(1rem / 2);
+  --form-control-pad-left-right: calc(1rem / 2);
+  --form-control-height-sm: calc(1rem * 2);
+  --form-control-height: calc(1rem * 2.286);
+  --form-control-height-lg: calc(1rem * 2.857);
+}
+
+//buttons
+:root {
+  --btn-height-sm: var(--form-control-height-sm);
+  --btn-height-md: var(--form-control-height);
+  --btn-height-lg: var(--form-control-height-lg);
+  --btn-pad-top-bot: calc(calc(var(--form-control-height) / 4) - 0.5px /* border */);
+  --btn-pad-left-right: calc(calc(var(--form-control-height) / 4) + 2px);
+}
+
+//viewport
+:root {
+  --message-banner-height: 0px; // valor controlado no componente de banner
+  --toolbar-button-height: var(--btn-height-sm);
+  --toolbar-height: calc(calc(var(--spacing-gutter) * 2) + var(--toolbar-button-height));
+  --above-toolbar-height: calc(var(--navbar-height) + var(--message-banner-height));
+  --above-main-height: calc(calc(var(--navbar-height) + var(--toolbar-height)) + var(--message-banner-height));
+  --below-navbar-height: calc(100vh - var(--above-toolbar-height));
+  --below-toolbar-height: calc(var(--below-navbar-height) - var(--toolbar-height));
+  --below-toolbar-height-gutter: calc(var(--below-toolbar-height) - var(--spacing-gutter));
+}
+
+//modals
+:root {
+  --modals-max-height: 95vh;
+  --modals-max-width: 98vw;
+  --modals-min-width: 200px;
+  --modals-min-height: 100px;
+}
+
+//portlet
+:root {
+  --portlet-header-height: var(--btn-height-lg);
+  --spacing-gutter-double: calc(var(--spacing-gutter) * 2);
+  --portlet-footer-height: calc(var(--btn-height-md) + var(--spacing-gutter-double));
+  --portlet-header-footer-height: calc(var(--portlet-header-height) + var(--portlet-footer-height));
+  --portlet-padding: var(--spacing-gutter);
+  --portlet-border-radius: 4px;
+  // o portlet do metronic nao possibilita o controle preciso da altura do seu header, tendo que fazer
+  // correcoes aribtrarias nas dimensoes dos elementos irmaos, como o body.
+  --portlet-body-correction: 2px;
+  --portlet-body-full-height: calc(
+    calc(calc(var(--below-toolbar-height-gutter) - var(--portlet-header-footer-height)) - var(--spacing-gutter-double)) -
+      var(--portlet-body-correction)
+  );
+}
+
+//fab
+:root {
+  --fab-toggle-sm: 40px;
+  --fab-toggle-md: 51px;
+}
+
+//chat
+:root {
+  --chat-fullscreen-width: 100vw;
+  --chat-colapsed-width: min(350px, 100vw);
+  --chat-header-height: 62px;
+}
+
+//side-nav
+:root {
+  --side-nav-expanded-size: 274px;
+  --side-nav-collapsed-size: calc(calc(var(--spacing-lg) * 2) + var(--side-nav-icon-font-size));
+}
+
+//border-radius
+:root {
+  --border-radius-1: 25px;
+}
+
+:root {
+  --list-line-height: var(--form-control-height);
+}
+
+//drawer
+:root {
+  --app-drawer-height: var(--below-navbar-height);
+}
+
+//login
+:root {
+  --input-container-padding: 5px;
+}

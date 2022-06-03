@@ -1,0 +1,22 @@
+/**
+
+  Regras de alcance global devem ser adicionadas aqui, como resets e temas.
+
+**/
+
+@import 'metronic/index';
+@import 'metronic-overrides';
+@import 'bootstrap/scss/popover';
+@import 'bootstrap-overrides';
+@import 'material-overrides';
+@import '~ngx-toastr/toastr';
+@import 'toastr';
+@import 'primeng-overrides';
+@import 'select2-overrides';
+@import '~@fullcalendar/common/main.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import 'ng-zorro/index';
+@import 'quill/index';
+@import 'pickr';
+@import 'angular-tippy/index'

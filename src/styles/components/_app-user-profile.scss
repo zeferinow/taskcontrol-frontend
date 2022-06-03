@@ -1,0 +1,24 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+.c-user-profile__name-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+  padding-right: 0;
+
+  .c-user-profile__user-avatar {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .c-user-profile {
+    .c-user-profile__name-content {
+      flex-direction: row;
+    }
+  }
+}

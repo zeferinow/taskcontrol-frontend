@@ -1,0 +1,52 @@
+app-switch {
+  --margin-size: calc(var(--c-switch-height) * 1.1);
+  --circle-size: calc(var(--c-switch-height) - 6px);
+  --background-color: var(--color-blue);
+
+  .ant-switch-inner {
+    font-size: var(--root-font-size);
+    margin-left: var(--margin-size);
+  }
+
+  .ant-switch-checked {
+    background-color: var(--background-color);
+
+    .ant-switch-inner {
+      margin-right: var(--margin-size);
+    }
+  }
+
+  .ant-switch::after {
+    height: var(--circle-size);
+    width: var(--circle-size);
+    top: 2px;
+    left: 2px;
+  }
+
+  .ant-switch-checked::after {
+    left: calc(100% - 2px);
+  }
+
+  .ant-switch:focus {
+    box-shadow: none !important;
+  }
+}
+
+app-switch.chat-status {
+  .ant-switch {
+    background-color: var(--color-danger);
+  }
+
+  .ant-switch-checked {
+    background: #fff;
+    border: 1px solid var(--color-green);
+
+    &::after {
+      background: var(--color-green);
+    }
+
+    .ant-switch-inner {
+      color: var(--color-green);
+    }
+  }
+}

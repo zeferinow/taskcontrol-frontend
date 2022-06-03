@@ -1,0 +1,36 @@
+//
+//** Form Component
+//
+
+//==== Component Mixins ====//
+
+//== Component Skin
+@mixin m-build-component--form-validation-state($state, $color) {
+  .has-#{$state} {
+    label:not([class]),
+    label.col-form-label,
+    label.form-control-label {
+      color: $color;
+    }
+
+    .form-control-feedback {
+      color: $color;
+    }
+
+    .input-group-text,
+    .form-control {
+      border-color: array-get($m--forms, input, skins, light, default, border, default);
+    }
+
+    .form-control:focus {
+      border-color: array-get($m--forms, input, skins, light, default, border, focus);
+    }
+  }
+}
+
+//==== Generate Component ====//
+
+//== Component States
+@include m-build-component--form-validation-state(success, array-get($m--state-colors, success, base));
+@include m-build-component--form-validation-state(warning, array-get($m--state-colors, warning, base));
+@include m-build-component--form-validation-state(danger, array-get($m--state-colors, danger, base));

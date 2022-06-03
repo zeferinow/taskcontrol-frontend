@@ -1,0 +1,52 @@
+// altera background e borda do checkbox
+.ant-tree-checkbox-checked .ant-tree-checkbox-inner,
+.ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner {
+  background-color: #fff;
+  border-color: var(--color-border);
+}
+// altera a cor da borda quando focado
+.ant-tree-checkbox-wrapper:hover .ant-tree-checkbox-inner,
+.ant-tree-checkbox:hover .ant-tree-checkbox-inner,
+.ant-tree-checkbox-input:focus + .ant-tree-checkbox-inner .ant-tree-checkbox-checked::after {
+  border-color: var(--color-border);
+}
+// altera a cor do check do estado "checked"
+.ant-tree-checkbox-checked .ant-tree-checkbox-inner::after {
+  border-color: var(--color-font);
+}
+// altera a cor do check do estado "indeterminado"
+.ant-tree-checkbox-indeterminate .ant-tree-checkbox-inner::after {
+  background-color: var(--color-font);
+}
+
+.ant-tree-checkbox-checked::after {
+  animation: none;
+  border-color: var(--color-border);
+}
+
+.ant-tree {
+  margin-top: -0.2rem !important;
+}
+
+.ant-tree li {
+  padding: 0 !important;
+  padding-top: 0.4rem !important;
+}
+
+.ant-tree-checkbox-disabled + span {
+  color: var(--color-font);
+}
+
+.ant-tree-checkbox {
+  top: -0.09em !important;
+}
+
+.ant-tree-switcher {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-tree {
+  color: var(--color-font);
+}

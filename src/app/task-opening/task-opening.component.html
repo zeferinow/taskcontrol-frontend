@@ -1,0 +1,28 @@
+<div class="container container-padding" id="container">
+  <div class="register-task card card-padding">
+    <form [formGroup]="taskOpeningForm" (ngSubmit)="onSubmit()" id="taskOpeningForm">
+      <h5>
+        <a id="sequenceNumber"></a>
+      </h5>
+      <hr>
+      <div class="form-group">
+        <label for="title">Título:</label>
+        <input class="form-control" type="title" formControlName="Title" id="title" required />
+      </div>
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <select class="form-control" type="number" formControlName="Status" id="status" required>
+            <option value=0>Não Iniciado</option>
+            <option value=1>Em Andamento</option>
+            <option value=2>Aguardando</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="Description">Descrição:</label>
+        <quill-editor [styles]="editorStyle" [modules]="editorConfig" formControlName="Description" id="description"></quill-editor>
+      </div>
+      <button type="submit" class="btn btn-dark btn-block btn-style">Registrar</button>
+      <!-- <app-form-debug [form]="taskOpeningForm"></app-form-debug> -->
+    </form> 
+  </div>
+</div>

@@ -1,0 +1,22 @@
+@import '~src/styles/settings/index';
+@import '~@material/elevation/mixins';
+
+/*
+* https://github.com/material-components/material-components-web/tree/master/packages/mdc-elevation
+*/
+@for $z-value from 0 through 24 {
+  .mdc-elevation--z#{$z-value} {
+    @include mdc-elevation($z-value, $color-elevation-shadow);
+  }
+}
+
+@for $z-value from 0 through 24 {
+  .mdc-elevation--dark--z#{$z-value} {
+    @include mdc-elevation($z-value, lighten($color-font, 10%));
+  }
+}
+
+.mdc-elevation-transition {
+  transition: mdc-elevation-transition-value();
+  will-change: $mdc-elevation-property;
+}

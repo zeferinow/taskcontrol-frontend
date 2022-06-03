@@ -1,0 +1,30 @@
+<div class="mat-dialog-size">
+    <form [formGroup]="proceedingRegisterForm" (ngSubmit)="onSubmit()" id="proceedingRegisterForm">
+        <div class="card-header card-proceeding-title bg-white mat-dialog-padding">
+            <a>Nova atividade</a>
+        </div>
+        <div class="mat-dialog-padding">
+            <div class="form-group">
+                <label for="Description">Descrição:</label>
+                <quill-editor [styles]="editorStyle" 
+                              [modules]="editorConfig" 
+                              formControlName="Description" 
+                              placeholder=""
+                              id="description">
+                </quill-editor>
+            </div>
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select class="form-control" type="number" formControlName="Status" id="status" required>
+                    <option value=0>Não Iniciado</option>
+                    <option value=1>Em Andamento</option>
+                    <option value=2>Aguardando</option>
+                    <option value=3>Concluído</option>
+                </select>
+            </div>
+        </div>
+        <div class="card-footer bg-white mat-dialog-padding">
+            <button type="submit" class="btn btn-dark btn-style ">Registrar</button>
+        </div>
+    </form> 
+</div>

@@ -1,0 +1,46 @@
+@import '~@material/elevation/mixins';
+@import '~src/styles/settings/index';
+
+.o-vertical-steps__step-head {
+  font-weight: bold;
+}
+
+.o-vertical-steps__step-number {
+  border: 2px solid var(--color-font);
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: var(--spacing-xsm);
+}
+
+.o-vertical-steps__step-body--bordered {
+  border-color: var(--color-font);
+}
+
+.o-vertical-steps__step--active {
+  .o-vertical-steps__step-head {
+    color: var(--color-info);
+  }
+  .o-vertical-steps__step-number {
+    border-color: var(--color-info);
+  }
+  .o-vertical-steps__step-body {
+    border-color: var(--color-info);
+  }
+}
+
+@media (max-width: array-get($m--layout-breakpoints, sm)) {
+  .o-vertical-steps__step-body {
+    margin: var(--spacing-gutter) 0;
+  }
+}
+
+@media (min-width: array-get($m--layout-breakpoints, sm)) {
+  .o-vertical-steps__step-body {
+    margin: var(--spacing-gutter);
+    padding-left: var(--spacing-gutter);
+  }
+}

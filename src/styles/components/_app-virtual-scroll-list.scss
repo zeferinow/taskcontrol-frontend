@@ -1,0 +1,43 @@
+.c-virtual-scroll-list__list {
+  flex-grow: 1;
+  padding: 0;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.c-virtual-scroll-list__item {
+  display: flex;
+}
+
+.c-virtual-scroll-list__item--padded {
+  padding: 0 6.66px;
+}
+
+.c-virtual-scroll-list__item--bordered + .c-virtual-scroll-list__item--bordered {
+  border-top: solid 1px var(--color-secondary-light-4);
+}
+
+.c-virtual-scroll-list__item--bordered {
+  border-left: solid 1px var(--color-secondary-light-4);
+  border-right: solid 1px var(--color-secondary-light-4);
+
+  &:first-child {
+    border-radius: 0.25rem 0.25rem 0 0;
+    border-top: solid 1px var(--color-secondary-light-4);
+  }
+
+  &:last-child:last-of-type:not(:only-of-type) {
+    border-radius: 0 0 0.25rem 0.25rem;
+    border-bottom: solid 1px var(--color-secondary-light-4);
+  }
+
+  &:only-of-type {
+    border-radius: 0.25rem 0.25rem 0.25rem 0.25rem;
+    border-top: solid 1px var(--color-secondary-light-4);
+    border-bottom: solid 1px var(--color-secondary-light-4);
+  }
+}
+
+.c-virtual-scroll-list__min-height {
+  min-height: 250px;
+}

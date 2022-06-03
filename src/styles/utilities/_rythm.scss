@@ -1,0 +1,260 @@
+/**
+* Medidas (margin, padding, top, left, right, bottom) que impactam
+* no ritmo das telas. É recomendado que as medidas sejam dadas em REM,
+* para que a configuração no tamanho de fonte impacte corretamente no
+* ritmo.
+**/
+
+@import '~src/styles/settings/index';
+@import '~src/styles/tools/index';
+
+@include createRythmClasses('margin', 'm');
+@include createRythmClasses('padding', 'p');
+
+.u-p-gutter {
+  padding: var(--spacing-gutter) !important;
+}
+
+.u-p-xsm {
+  padding: var(--spacing-xsm) !important;
+}
+
+.u-p-xxsm {
+  padding: var(--spacing-xxsm) !important;
+}
+
+.u-pt-gutter {
+  padding-top: var(--spacing-gutter) !important;
+}
+
+.u-pr-xxsm {
+  padding-right: var(--spacing-xxsm) !important;
+}
+
+.u-pr-xsm {
+  padding-right: var(--spacing-xsm) !important;
+}
+
+.u-pr-gutter {
+  padding-right: var(--spacing-gutter) !important;
+}
+
+.u-pb-gutter {
+  padding-bottom: var(--spacing-gutter) !important;
+}
+
+.u-pl-0 {
+  padding-left: 0 !important;
+}
+
+.u-pl-gutter {
+  padding-left: var(--spacing-gutter) !important;
+}
+
+.u-m-gutter {
+  margin: var(--spacing-gutter) !important;
+}
+
+.u-m-negative-gutter {
+  margin: calc(var(--spacing-gutter) * -1) !important;
+}
+
+.u-ml-negative-gutter {
+  margin-left: calc(var(--spacing-gutter) * -1) !important;
+}
+
+.u-ml-negative-xxsm {
+  margin-left: calc(var(--spacing-xxsm) * -1) !important;
+}
+
+.u-mr-negative-gutter {
+  margin-left: calc(var(--spacing-gutter) * -1) !important;
+}
+
+.u-mt-gutter {
+  margin-top: var(--spacing-gutter) !important;
+}
+
+.u-mt-gutter {
+  margin-top: var(--spacing-gutter) !important;
+}
+
+.u-mt-gutter-double {
+  margin-top: var(--spacing-gutter-double) !important;
+}
+
+.u-owl-mt-xsm + .u-owl-mt-xsm {
+  margin-top: var(--spacing-xsm) !important;
+}
+
+.u-owl-mt-gutter + .u-owl-mt-gutter {
+  margin-top: var(--spacing-gutter) !important;
+}
+
+.u-mr-gutter {
+  margin-right: var(--spacing-gutter) !important;
+}
+
+.u-mr-gutter-double {
+  margin-right: var(--spacing-gutter-double) !important;
+}
+
+.u-mb-gutter {
+  margin-bottom: var(--spacing-gutter) !important;
+}
+
+.u-ml-gutter {
+  margin-left: var(--spacing-gutter) !important;
+}
+
+.u-ml-sm {
+  margin-left: var(--spacing-sm) !important;
+}
+
+.u-owl-ml-gutter + .u-owl-ml-gutter {
+  margin-left: var(--spacing-gutter) !important;
+}
+
+.u-mt-xsm {
+  margin-top: var(--spacing-xsm) !important;
+}
+
+.u-mt-xxsm {
+  margin-top: var(--spacing-xxsm) !important;
+}
+
+.u-mr-xsm {
+  margin-right: var(--spacing-xsm) !important;
+}
+
+.u-mb-sm {
+  margin-bottom: var(--spacing-sm) !important;
+}
+
+.u-m-xsm {
+  margin: var(--spacing-xsm) !important;
+}
+
+.u-mb-xsm {
+  margin-bottom: var(--spacing-xsm) !important;
+}
+
+.u-ml-xsm {
+  margin-left: var(--spacing-xsm) !important;
+}
+
+.u-mr-lg {
+  margin-right: var(--spacing-lg) !important;
+}
+
+.u-mr-xxsm {
+  margin-right: var(--spacing-xxsm) !important;
+}
+
+.u-mb-xxsm {
+  margin-bottom: var(--spacing-xxsm) !important;
+}
+
+.u-ml-lg {
+  margin-left: var(--spacing-lg) !important;
+}
+
+.u-ml-xxsm {
+  margin-left: var(--spacing-xxsm) !important;
+}
+
+.u-mr-auto {
+  margin-right: auto !important;
+}
+
+.u-mt-lg {
+  margin-top: var(--spacing-lg) !important;
+}
+
+.u-mr-lg {
+  margin-right: var(--spacing-lg) !important;
+}
+
+.u-pl-xxsm {
+  padding-left: var(--spacing-xxsm) !important;
+}
+
+.u-pb-xxsm {
+  padding-bottom: var(--spacing-xxsm) !important;
+}
+
+.u-pb-xsm {
+  padding-bottom: var(--spacing-xsm) !important;
+}
+
+.u-pb-sm {
+  padding-bottom: var(--spacing-sm) !important;
+}
+
+.u-float-right {
+  float: right !important;
+}
+
+.u-float-left {
+  float: left !important;
+}
+
+.u-p-portlet {
+  padding: var(--portlet-padding) !important;
+}
+
+.u-pt-xsm {
+  padding-top: var(--spacing-xsm) !important;
+}
+
+.u-pt-xxsm {
+  padding-top: var(--spacing-xxsm) !important;
+}
+
+.u-pt-portlet {
+  padding-top: var(--portlet-padding) !important;
+}
+
+.u-pl-portlet {
+  padding-left: var(--portlet-padding) !important;
+}
+
+.u-pb-portlet {
+  padding-bottom: var(--portlet-padding) !important;
+}
+
+.u-pr-portlet {
+  padding-right: var(--portlet-padding) !important;
+}
+
+.u-m-0 {
+  margin: 0 !important;
+}
+
+.u-mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.u-mr-0 {
+  margin-right: 0 !important;
+}
+
+.u-p-0 {
+  padding: 0 !important;
+}
+
+.u-pb-0 {
+  padding-bottom: 0 !important;
+}
+
+.u-pt-0 {
+  padding-top: 0 !important;
+}
+
+.u-l-0 {
+  left: 0 !important;
+}
+
+.u-r-0 {
+  right: 0 !important;
+}

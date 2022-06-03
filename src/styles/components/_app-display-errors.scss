@@ -1,0 +1,11 @@
+@import '~src/styles/settings/index';
+
+input,
+textarea {
+  &.display-errors-force-control-error.ng-invalid,
+  &.ng-dirty.ng-invalid {
+    &.form-control {
+      border-color: var(--color-danger);
+    }
+  }
+}

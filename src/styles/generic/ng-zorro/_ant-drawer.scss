@@ -1,0 +1,78 @@
+@use '~@material/elevation/mixins' as mdc-mixins;
+@import '~src/styles/settings/index';
+
+.ant-drawer-wrapper-body {
+  display: flex;
+  flex-direction: column;
+  overflow: visible !important;
+}
+
+.ant-drawer-header {
+  padding: var(--spacing-gutter);
+  border-top: 1px solid #e8e8e8;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ant-drawer-title {
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+}
+
+.ant-drawer-body {
+  padding: 0;
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  line-height: var(--root-line-height);
+}
+
+.ant-drawer-content-wrapper {
+  max-width: 300px;
+  box-shadow: none;
+  & .ant-drawer-open {
+    @include mdc-elevation(10, $color-elevation-shadow);
+  }
+}
+
+//Alinhas o botão de close
+//{
+.ant-drawer-close {
+  display: flex;
+  height: var(--spacing-gutter);
+  width: var(--spacing-gutter);
+  position: inherit;
+}
+
+.ant-drawer-close-x {
+  display: flex;
+  font-weight: initial !important;
+}
+//}
+
+// Ajuste para permitir clicar fora do drawer enquanto o mesmo estiver aberto
+// sem isso não é possível clicar em nada porque fica uma div em cima de tudo
+//{
+.ant-drawer-left.ant-drawer-open,
+.ant-drawer-right.ant-drawer-open {
+  width: auto;
+}
+//}
+
+// Ajustes para que o drawer seja exibido à baixo do header
+// {
+.ant-drawer-mask {
+  height: calc(100% - var(--app-drawer-height)) !important;
+  top: auto;
+  bottom: 0;
+}
+
+.ant-drawer-left .ant-drawer-content-wrapper,
+.ant-drawer-right .ant-drawer-content-wrapper {
+  height: var(--app-drawer-height) !important;
+  bottom: 0;
+}
+//}

@@ -1,0 +1,25 @@
+.u-animation-appear {
+  animation: appear 0.4s ease forwards !important;
+}
+
+.u-animation-disappear {
+  animation: desappear 0.2s ease forwards !important;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes desappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

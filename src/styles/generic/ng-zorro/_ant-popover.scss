@@ -1,0 +1,31 @@
+.ant-popover {
+  line-height: var(--root-line-height);
+}
+
+.ant-popover-inner-content {
+  color: var(--color-font) !important;
+}
+
+.ant-popover-inner-content,
+.ant-popover-title {
+  padding: var(--app-overlay-padding, var(--spacing-gutter));
+  min-width: unset;
+}
+
+.ant-popover-inner {
+  border-radius: 4px;
+  overflow: auto;
+  @include mdc-elevation(12, $color-font);
+}
+
+.ant-popover-placement-left,
+.ant-popover-placement-leftTop,
+.ant-popover-placement-leftBottom {
+  padding-right: 9px;
+}
+
+.ant-popover-placement-right,
+.ant-popover-placement-rightTop,
+.ant-popover-placement-rightBottom {
+  padding-left: 9px;
+}

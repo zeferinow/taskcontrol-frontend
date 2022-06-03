@@ -1,0 +1,6 @@
+app-role-permissions {
+  &.ng-invalid.ng-dirty .c-portlet,
+  &.ng-invalid.display-errors-force-control-error .c-portlet {
+    border-color: var(--color-danger);
+  }
+}

@@ -1,0 +1,5 @@
+app-week-flexible-time {
+  &.ng-invalid.ng-dirty.c-week-flexible-time__required .form-control {
+    border-color: var(--color-danger);
+  }
+}

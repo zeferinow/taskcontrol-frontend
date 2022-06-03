@@ -1,0 +1,95 @@
+@import '~src/styles/settings/index';
+
+app-dropdown.ng-invalid.ng-dirty .select2-selection,
+app-dropdown.ng-invalid.display-errors-force-control-error .select2-selection {
+  border-color: var(--color-danger);
+}
+
+app-dropdown {
+  --arrow-width: 1.3rem;
+  --arrow-margin: 5px;
+  --arrow-total-width: calc(var(--arrow-width) + var(--arrow-margin));
+  --clear-width: 1.8rem;
+  --clear-and-arrow-width: calc(var(--clear-width) + var(--arrow-total-width));
+}
+
+app-dropdown:focus {
+  outline: none;
+}
+
+app-dropdown:focus .select2-selection {
+  border-color: var(--color-primary) !important;
+}
+
+.c-dropdown {
+  .c-dropdown,
+  .c-multiselect {
+    & .c-dropdown__group {
+      font-weight: bold !important;
+    }
+    & .c-dropdown__group-child {
+      padding-left: $dropdown-option-child-left-padding !important;
+    }
+    & .c-dropdown__item {
+      padding-left: $dropdown-option-left-padding !important;
+    }
+  }
+}
+
+.c-dropdown--no-arrow {
+  .select2-selection__arrow::before {
+    content: '' !important;
+  }
+}
+
+.c-dropdown-option__text {
+  word-break: break-word;
+}
+
+%c-dropdown-option {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.5rem;
+}
+
+@for $i from 1 through 50 {
+  $suffix: $i - 1;
+  $multiplier: $i * 5;
+  $root-padding: 0.5rem;
+  $padding: (0.1rem * $multiplier) + $root-padding;
+  @if $i == 1 {
+    $multiplier: $i;
+    $padding: $root-padding;
+  }
+  .c-dropdown__option-#{$suffix} {
+    padding-left: $padding;
+    @extend %c-dropdown-option;
+  }
+  .c-dropdown__option-undefined {
+    padding-left: $root-padding;
+    @extend %c-dropdown-option;
+  }
+}
+
+.c-dropdown-option__image,
+.c-dropdown-selected-option__image {
+  border-radius: 50%;
+}
+
+.c-dropdown-option__image {
+  height: calc(var(--form-control-height) - 10px);
+  width: calc(var(--form-control-height) - 10px);
+  margin-right: 5px;
+}
+
+.c-dropdown-selected-option__image {
+  height: calc(var(--form-control-height) - 25px);
+  width: calc(var(--form-control-height) - 25px);
+}
+
+.c-dropdown__option-group {
+  font-weight: bold;
+}

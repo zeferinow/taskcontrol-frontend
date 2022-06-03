@@ -1,0 +1,11 @@
+app-dropdown-dynamic[showWarning],
+app-service-dropdown-tree[showWarning],
+app-dropdown[showWarning] {
+  & .form-control {
+    border-color: var(--color-warning) !important;
+  }
+
+  & .select2-selection {
+    border-color: var(--color-warning) !important;
+  }
+}

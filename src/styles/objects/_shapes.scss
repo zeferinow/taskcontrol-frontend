@@ -1,0 +1,21 @@
+.o-shapes-circle {
+  display: inline-block;
+  border: 1px solid var(--color-font);
+  background-color: var(--color-font);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.o-shapes-circle-o {
+  display: inline-block;
+  border: 1px solid var(--color-font);
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.o-shapes-pill {
+  border-radius: 20px;
+  padding: 0 10px;
+}

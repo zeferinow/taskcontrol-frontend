@@ -1,0 +1,32 @@
+.o-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  background-color: #fff;
+  overflow: scroll;
+}
+
+.o-card__header {
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+  font-size: 16px;
+  padding: var(--spacing-sm) var(--spacing-gutter);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.o-card__body {
+  padding: var(--spacing-gutter);
+  flex-grow: 1;
+}
+
+.o-porlet-tab-header-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 var(--spacing-xsm);
+  margin: 0;
+  background: var(--color-border);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  height: calc(var(--btn-height-sm) + var(--spacing-sm));
+  align-items: center;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card card-padding mh-50">
+        <div style="vertical-align: text-bottom;">
+            <label class="user-list-title">Lista de Usuários</label> 
+            <button type="button" class="btn btn-success float-right">Adicionar</button>
+        </div>
+        <hr>
+        <div class="table-responsive">
+            <table class="table mb-0">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Cpf</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users" (click)="userVisualization(user)">
+                        <td>
+                            <label>{{ user.name }}</label>
+                        </td>
+                        <td>
+                            <label>{{ user.cpf | mask: '000.000.000-00' }}</label>
+                        </td>
+                        <td>
+                            <label>{{ user.email }}</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

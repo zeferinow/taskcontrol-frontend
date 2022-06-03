@@ -1,0 +1,6 @@
+@import '~src/styles/settings/index';
+
+app-service-tree.ng-invalid.ng-dirty .c-tree__tree-container,
+app-service-tree.ng-invalid.display-errors-force-control-error .c-tree__tree-container {
+  border-color: var(--color-danger);
+}

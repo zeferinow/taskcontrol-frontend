@@ -1,0 +1,85 @@
+.pcr-app {
+  z-index: var(--dropdowns-z-index);
+  border-radius: 4px;
+}
+
+.pcr-app .pcr-interaction .pcr-save {
+  background-color: var(--color-success);
+  border-radius: 4px;
+  padding: 0 var(--btn-pad-left-right);
+  height: var(--btn-height-md);
+}
+
+.pcr-app .pcr-interaction .pcr-save:not(:disabled):not(.disabled):hover,
+.pcr-app .pcr-interaction .pcr-save:not(:disabled):not(.disabled):active,
+.pcr-app .pcr-interaction .pcr-save:not(:disabled):not(.disabled).active {
+  color: var(--color-white);
+  border-color: var(--color-success-light-0);
+  background-color: var(--color-success-light-0) !important;
+}
+
+.pcr-app .pcr-interaction .pcr-save.active,
+.pcr-app .pcr-interaction .pcr-save.focus,
+.pcr-app .pcr-interaction .pcr-save:focus,
+.pcr-app .pcr-interaction .pcr-save:hover:not(:disabled) {
+  color: #ffffff !important;
+  -webkit-filter: unset;
+  filter: unset;
+}
+
+.pcr-app .pcr-interaction input {
+  font-family: $default-font-family !important;
+  height: var(--btn-height-sm) !important;
+  font-size: var(--root-font-size) !important;
+}
+
+.pcr-app .pcr-interaction input:focus {
+  box-shadow: none;
+}
+
+.pickr .pcr-button {
+  height: 1.2rem;
+  width: 1.2rem;
+
+  border-color: whitesmoke;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.pickr .pcr-button::before {
+  border-radius: unset !important;
+}
+.pickr .pcr-button::after {
+  border-radius: unset !important;
+}
+
+.pickr {
+  display: flex;
+}
+
+.pcr-app button.pcr-active,
+.pcr-app button:focus,
+.pcr-app input.pcr-active,
+.pcr-app input:focus,
+.pickr button.pcr-active,
+.pickr button:focus,
+.pickr input.pcr-active,
+.pickr input:focus {
+  box-shadow: none;
+}
+
+.pcr-app .pcr-interaction .pcr-result {
+  flex: 1 1 4em;
+  min-width: 4em;
+}
+
+.pcr-app .pcr-interaction input {
+  letter-spacing: unset;
+}
+
+.pcr-app > .pcr-selection > .pcr-color-preview > div {
+  color: rgb(255, 255, 255);
+  border-color: whitesmoke;
+  border-style: solid;
+  border-width: 1px;
+}

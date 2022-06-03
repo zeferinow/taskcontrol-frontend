@@ -1,0 +1,14 @@
+app-timeline {
+  .ant-timeline {
+    margin-left: 65px;
+    margin-top: 20px
+  }
+
+  .ant-timeline-item-last>.ant-timeline-item-content {
+    min-height: unset;
+  }
+
+  .ant-timeline-item-last {
+    padding-bottom: 0;
+  }
+}

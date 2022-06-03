@@ -1,0 +1,33 @@
+@import '~src/styles/settings/index';
+
+app-section {
+  nz-collapse-panel:not(.no-content-box-margin) {
+    .ant-collapse-content-box {
+      margin-top: var(--spacing-gutter);
+    }
+  }
+
+  .ant-collapse-header {
+    color: var(--color-font);
+    font-size: var(--font-size-7) !important;
+    margin: 0;
+    font-weight: bold;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 0 var(--spacing-xxsm) 0;
+    display: flex;
+    align-items: center;
+    font-family: $title-font-family;
+    font-weight: $title-font-weight;
+  }
+
+  .ant-collapse-arrow {
+    font-size: var(--root-font-size);
+    margin-right: var(--spacing-xsm);
+  }
+
+  .ant-collapse-extra {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
+}

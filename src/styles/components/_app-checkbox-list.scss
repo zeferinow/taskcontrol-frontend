@@ -1,0 +1,6 @@
+app-checkbox-list {
+  &.ng-invalid.ng-dirty .c-checkbox__check-square,
+  &.ng-invalid.display-errors-force-control-error .c-checkbox__check-square {
+    border-color: var(--color-danger) !important;
+  }
+}

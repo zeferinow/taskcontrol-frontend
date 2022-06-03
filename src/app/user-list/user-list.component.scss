@@ -1,0 +1,31 @@
+td{
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    padding: 6px 8px;
+    width: 40px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+table{
+    border: 1px solid #dee2e6;
+}
+
+thead{
+    background-color: #dee2e6;
+}
+
+label{
+    cursor: pointer;
+    margin: 0;
+}
+
+.user-list-title{
+    padding: 12px 0px 0px 12px; 
+    font-weight: bold; 
+    font-size:large;
+}
+
+.container{
+    width: 900px;
+}

@@ -1,0 +1,35 @@
+.fab-parent {
+  position: relative;
+}
+
+.fab-relative {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 999;
+}
+
+.fab-window {
+  position: fixed;
+  z-index: var(--overlays-z-index);
+  bottom: var(--spacing-gutter);
+  right: var(--spacing-gutter);
+}
+
+.fab-header-page {
+  position: fixed;
+  z-index: var(--fabs-z-index);
+  right: 2.3rem;
+}
+
+@media (min-width: array-get($m--layout-breakpoints, lg)+1) {
+  .fab-header-page {
+    top: 4.65rem;
+  }
+}
+
+@media (max-width: array-get($m--layout-breakpoints, lg)) {
+  .fab-header-page {
+    top: 4.8rem;
+  }
+}

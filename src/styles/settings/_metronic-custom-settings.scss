@@ -1,0 +1,10 @@
+@import '~src/styles/settings/typeface';
+@import '~src/styles/settings/metronic/framework-config';
+@import '~src/styles/generic/metronic/base/_mixins';
+
+// fonts
+$m--font-families: (
+  regular: $default-font-family,
+  heading: $default-font-family,
+  editor: $default-font-family
+);

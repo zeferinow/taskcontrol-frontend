@@ -1,0 +1,110 @@
+.u-color-white {
+  color: #ffffff !important;
+}
+
+.u-font-color {
+  color: var(--color-font) !important;
+}
+
+.u-bg-color-white-all {
+  background-color: var(--color-white) !important;
+  &:after {
+    background-color: var(--color-white) !important;
+  }
+  &:before {
+    background-color: var(--color-white) !important;
+  }
+}
+
+.u-color-success {
+  color: var(--color-success) !important;
+}
+
+.u-color-warning {
+  color: var(--color-warning) !important;
+}
+
+.u-border-right-color {
+  border-right: 1px solid var(--color-border) !important;
+}
+
+.u-bg-color-disabled {
+  background-color: var(--color-disabled) !important;
+}
+
+.u-bg-color-primary {
+  background-color: var(--color-primary) !important;
+}
+
+.u-bg-color-primary-light-2 {
+  background-color: var(--color-primary-light-2) !important;
+}
+
+.u-bg-color-white {
+  background-color: #fff !important;
+}
+
+.u-bg-color-orange {
+  background-color: var(--color-orange) !important;
+}
+
+.u-bg-color-yellow {
+  background-color: var(--color-yellow) !important;
+}
+
+.u-bg-color-purple {
+  background-color: var(--color-primary-light-2) !important;
+}
+
+.u-bg-color-gray {
+  background-color: var(--gray-color) !important;
+}
+
+.u-bg-color-green {
+  background-color: var(--color-green) !important;
+}
+
+.u-bg-color-danger {
+  background-color: var(--color-danger);
+}
+
+.u-bg-color-warning {
+  background-color: var(--color-warning) !important;
+}
+
+.u-bg-color-info {
+  background-color: var(--color-info) !important;
+}
+
+.u-bg-color-success {
+  background-color: var(--color-success) !important;
+}
+
+.u-warning-border-color {
+  border-color: var(--color-warning) !important;
+}
+
+.u-color-font-dimmed {
+  color: var(--color-font-light-2) !important;
+}
+
+.u-color-font-primary {
+  color: var(--color-primary) !important;
+}
+
+.u-fill-secondary {
+  fill: var(--color-secondary) !important;
+}
+
+.u-color-font-secondary {
+  color: var(--color-secondary) !important;
+}
+
+.u-border-right-radius-none {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.u-border-right-none {
+  border-right: none !important;
+}

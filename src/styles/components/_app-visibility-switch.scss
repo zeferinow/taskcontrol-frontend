@@ -1,0 +1,24 @@
+app-visibility-switch app-switch .ant-switch {
+  background-color: var(--color-white) !important;
+  border-color: var(--color-secondary) !important;
+
+  & .ant-switch-inner {
+    color: var(--color-secondary) !important;
+  }
+
+  &::after {
+    background-color: var(--color-secondary) !important;
+  }
+
+  &.ant-switch-checked {
+    background-color: var(--color-secondary) !important;
+
+    & .ant-switch-inner {
+      color: var(--color-white) !important;
+    }
+
+    &::after {
+      background-color: var(--color-white) !important;
+    }
+  }
+}

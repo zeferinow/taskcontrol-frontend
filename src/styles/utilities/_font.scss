@@ -1,0 +1,52 @@
+@import '~src/styles/settings/index';
+
+.u-label {
+  margin-bottom: 5px;
+  font-size: #{array-get($m--root-font, size, desktop)} !important;
+  font-family: $title-font-family;
+  font-weight: $title-font-weight;
+}
+
+.u-font-xsm {
+  font-size: calc(#{array-get($m--root-font, size, desktop)} - 5px);
+}
+
+.u-font-size-title {
+  font-size: var(--font-size-title) !important;
+}
+
+.u-word-break-word {
+  word-break: break-word !important;
+}
+
+.u-white-space-normal {
+  white-space: normal !important;
+}
+
+.u-font-bold {
+  font-weight: bold !important;
+}
+
+.u-font-size-small {
+  font-size: var(--font-size-small) !important;
+}
+
+@include tablet {
+  .u-label {
+    font-size: #{array-get($m--root-font, size, tablet)} !important;
+  }
+
+  .u-font-xsm {
+    font-size: calc(#{array-get($m--root-font, size, tablet)} - 5px);
+  }
+}
+
+@include mobile {
+  .u-label {
+    font-size: #{array-get($m--root-font, size, mobile)} !important;
+  }
+
+  .u-font-xsm {
+    font-size: calc(#{array-get($m--root-font, size, mobile)} - 5px);
+  }
+}

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="card card-padding mh-50">
+        <span class="task-list-title">Lista de Tasks</span> 
+        <hr>
+        <div class="table-responsive">
+            <table class="table mb-0">
+                <thead>
+                    <tr>
+                        <th>Número</th>
+                        <th>Título</th>
+                        <th>Status</th>
+                        <th>Gerador</th>
+                        <th>Responsável</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let task of tasks" (click)="taskVisualization(task)">
+                        <td>
+                            <label>{{ task.sequenceNumber }}</label>
+                        </td>
+                        <td>
+                            <label>{{ task.title }}</label>
+                        </td>
+                        <td>
+                            <button class="status-outline {{
+                                getStatusColorClass(task.status) }}">{{ task.status }}</button>
+                        </td>
+                        <td>
+                            <label>{{ task.generatorName }}</label>
+                        </td>
+                        <td>
+                            <label>{{ task.responsibleName}}</label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+$lower-z-index: -10;
+$normal-z-index: 0;
+$higher-z-index: 10;
+$max-z-index: 2147483647;
+$min-z-index: -2147483648;
+$toastrs-z-index: $max-z-index - 1;
+$confirmation-dialog-z-index: $max-z-index - 50;
+$dropdowns-z-index: $max-z-index - 100;
+$cdk-overlay-z-index: $max-z-index - 200;
+$portlet-fullscreen-z-index: $max-z-index - 300;
+$instruction-modals-z-index: $max-z-index - 400;
+$side-nav-z-index: $max-z-index - 500;
+$chat-z-index: $max-z-index - 600;
+$overlays-z-index: $max-z-index - 700;
+$fabs-z-index: $max-z-index - 800;

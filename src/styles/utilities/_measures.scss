@@ -1,0 +1,162 @@
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+@import '~bootstrap/scss/mixins/_breakpoints';
+
+@include media-breakpoint-up(sm) {
+  .u-max-width-50\@sm-up {
+    max-width: 50% !important;
+  }
+  .u-min-width-25\@sm-up {
+    min-width: 25% !important;
+  }
+  .u-min-width-50\@sm-up {
+    min-width: 50% !important;
+  }
+  .u-min-width-75\@sm-up {
+    min-width: 75% !important;
+  }
+}
+
+.u-h-100 {
+  height: 100% !important;
+}
+
+.u-h-auto {
+  height: auto !important;
+}
+
+.u-h-form-control {
+  height: var(--form-control-height) !important;
+}
+
+.u-min-h-form-control {
+  min-height: var(--form-control-height) !important;
+}
+
+.u-w-100 {
+  width: 100% !important;
+}
+
+.u-width-sm {
+  width: 300px !important;
+}
+
+.u-min-height-auto {
+  min-height: auto !important;
+}
+
+.u-min-height-xsm {
+  min-height: 250px !important;
+}
+
+.u-min-height-sm {
+  min-height: 350px !important;
+}
+
+.u-min-height-md {
+  min-height: 500px !important;
+}
+
+.u-max-height-sm {
+  max-height: 250px !important;
+}
+
+.u-max-width-50 {
+  max-width: 50% !important;
+}
+
+.u-max-width-100 {
+  max-width: 100% !important;
+}
+
+.u-la-1\.5x {
+  font-size: 1.5rem !important;
+}
+
+.u-la-2x {
+  font-size: 2rem !important;
+}
+
+.u-la-4x {
+  font-size: 4rem !important;
+}
+
+.u-btn-lg {
+  height: var(--btn-height-lg) !important;
+}
+
+.u-btn-md {
+  height: var(--btn-height-md) !important;
+}
+
+.u-btn-sm {
+  height: var(--btn-height-sm) !important;
+}
+
+.u-h-sm {
+  height: var(--btn-height-sm) !important;
+}
+
+.u-w-sm {
+  width: var(--btn-height-sm) !important;
+}
+
+.u-font-size-xxxlg {
+  font-size: var(--font-size-xxxlg) !important;
+}
+
+.u-font-size-xxlg {
+  font-size: var(--font-size-xxlg) !important;
+}
+
+.u-font-size-xlg {
+  font-size: var(--font-size-xlg) !important;
+}
+
+.u-font-size-lg {
+  font-size: var(--font-size-lg) !important;
+}
+
+.u-font-size-md {
+  font-size: var(--font-size-md) !important;
+}
+
+.u-font-size-sm {
+  font-size: var(--font-size-sm) !important;
+}
+
+.u-font-size-xsm {
+  font-size: var(--font-size-xsm) !important;
+}
+
+.u-font-size-xxsm {
+  font-size: var(--font-size-xxsm) !important;
+}
+
+.u-font-size-xxxsm {
+  font-size: var(--font-size-xxxsm) !important;
+}
+
+.u-font-size-title {
+  font-size: var(--font-size-title) !important;
+}
+
+.u-root-font-size {
+  font-size: var(--root-font-size) !important;
+}
+
+.u-below-toolbar-height {
+  height: var(--below-toolbar-height) !important;
+}
+
+.u-below-toolbar-height-gutter {
+  height: calc(var(--below-toolbar-height) - var(--spacing-gutter)) !important;
+}
+
+.u-below-toolbar-max-height-gutter {
+  max-height: calc(var(--below-toolbar-height) - var(--spacing-gutter)) !important;
+}
+
+.u-portlet-body-full-height {
+  height: var(--portlet-body-full-height);
+}

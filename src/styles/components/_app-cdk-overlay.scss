@@ -1,0 +1,21 @@
+@import '~src/styles/settings/index';
+
+.cdk-overlay-container {
+  z-index: $cdk-overlay-z-index;
+}
+
+.cdk-global-overlay-wrapper {
+  z-index: $cdk-overlay-z-index;
+}
+
+.cdk-overlay-pane {
+  z-index: $cdk-overlay-z-index;
+}
+
+.cdk-overlay-connected-position-bounding-box {
+  z-index: $cdk-overlay-z-index;
+}
+
+.cdk-overlay-backdrop {
+  z-index: $cdk-overlay-z-index;
+}

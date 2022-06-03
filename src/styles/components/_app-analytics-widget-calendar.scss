@@ -1,0 +1,62 @@
+app-analytics-widget-calendar {
+  .c-analytics-widget-calendar__calendar {
+    .fc-unthemed {
+      height: 100% !important;
+      display: flex !important;
+      flex-direction: column !important;
+
+      h2 {
+        font-size: 1rem;
+      }
+    }
+
+    .fc-toolbar {
+      margin-bottom: 0 !important;
+    }
+
+    .fc-view-container {
+      flex-grow: 1 !important;
+      overflow-y: auto !important;
+    }
+
+    .fc-left,
+    .fc-right,
+    .fc-center {
+      display: inline-block !important;
+
+      > * {
+        margin: 0 !important;
+      }
+    }
+
+    .fc-list-empty {
+      background-color: #fff !important;
+    }
+  }
+
+  .c-analytics-widget-calendar__calendar-empty {
+    .fc-listWeek-view {
+      border: none;
+    }
+  }
+
+  @media (min-width: 1025px) {
+    .c-analytics-widget-calendar__calendar {
+      .fc-left,
+      .fc-right,
+      .fc-center {
+        margin-bottom: 8px !important;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .c-analytics-widget-calendar__calendar {
+      .fc-left,
+      .fc-right,
+      .fc-center {
+        margin-bottom: 14px !important;
+      }
+    }
+  }
+}

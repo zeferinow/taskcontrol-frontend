@@ -1,0 +1,93 @@
+@import '~src/styles/settings/index';
+
+$color-brand: #2dbcb6;
+$color-primary: #2b82c5;
+$color-secondary: #717c99;
+$color-scrollbar: #ccc;
+$color-external-user-main: #f9fbfd;
+
+:root {
+  --color-brand-dark-3: #{darken($color-brand, 30%)};
+  --color-brand-dark-2: #{darken($color-brand, 20%)};
+  --color-brand-dark-1: #{darken($color-brand, 10%)};
+  --color-brand-dark-0: #{darken($color-brand, 5%)};
+  --color-brand: #{$color-brand};
+  --color-brand-light-0: #{lighten($color-brand, 5%)};
+  --color-brand-light-1: #{lighten($color-brand, 10%)};
+  --color-brand-light-2: #{lighten($color-brand, 20%)};
+  --color-brand-light-3: #{lighten($color-brand, 30%)};
+  --color-brand-light-4: #{lighten($color-brand, 40%)};
+  --color-brand-light-5: #{lighten($color-brand, 50%)};
+  --color-brand-light-6: #{lighten($color-brand, 60%)};
+
+  --color-primary-dark-3: #{darken($color-primary, 30%)};
+  --color-primary-dark-2: #{darken($color-primary, 20%)};
+  --color-primary-dark-1: #{darken($color-primary, 10%)};
+  --color-primary-dark-0: #{darken($color-primary, 5%)};
+  --color-primary: #{$color-primary};
+  --color-primary-light-0: #{lighten($color-primary, 5%)};
+  --color-primary-light-1: #{lighten($color-primary, 10%)};
+  --color-primary-light-2: #{lighten($color-primary, 20%)};
+  --color-primary-light-3: #{lighten($color-primary, 30%)};
+  --color-primary-light-4: #{lighten($color-primary, 40%)};
+  --color-primary-light-5: #{lighten($color-primary, 50%)};
+
+  --color-secondary: #{$color-secondary};
+  --color-secondary-light-0: #{lighten($color-secondary, 5%)};
+  --color-secondary-light-1: #{lighten($color-secondary, 10%)};
+  --color-secondary-light-2: #{lighten($color-secondary, 20%)};
+  --color-secondary-light-3: #{lighten($color-secondary, 30%)};
+  --color-secondary-light-4: #{lighten($color-secondary, 40%)};
+
+  --color-success-dark-1: var(--color-green-dark-1);
+  --color-success-dark-0: var(--color-green-dark-0);
+  --color-success: var(--color-green);
+  --color-success-light-0: var(--color-green-light-0);
+  --color-success-light-1: var(--color-green-light-1);
+  --color-success-light-2: var(--color-green-light-2);
+  --color-success-light-3: var(--color-green-light-3);
+
+  --color-danger: var(--color-red);
+  --color-danger-light-0: var(--color-red-light-0);
+  --color-danger-light-1: var(--color-red-light-1);
+  --color-danger-light-2: var(--color-red-light-2);
+  --color-danger-light-3: var(--color-red-light-3);
+
+  --color-warning: var(--color-yellow);
+  --color-warning-light-0: var(--color-yellow-light-0);
+  --color-warning-light-1: var(--color-yellow-light-1);
+  --color-warning-light-2: var(--color-yellow-light-2);
+  --color-warning-light-3: var(--color-yellow-light-3);
+
+  --color-info: var(--color-blue);
+  --color-info-light-0: var(--color-blue-light-0);
+  --color-info-light-1: var(--color-blue-light-1);
+  --color-info-light-2: var(--color-blue-light-2);
+  --color-info-light-3: var(--color-blue-light-3);
+
+  --color-hint: var(--color-secondary);
+
+  --color-font: #{$color-font};
+  --color-font-light-1: #{$color-font-light-1};
+  --color-font-light-2: #{$color-font-light-2};
+  --color-font-light-3: #{$color-font-light-3};
+  --color-brand-font: var(--color-white);
+
+  --color-main-bg-dark-1: #{$color-main-bg-dark-1};
+  --color-main-bg: #{$color-main-bg};
+  --color-main-bg-light-1: #{$color-main-bg-light-1};
+
+  --color-border: #{$color-main-bg};
+
+  --color-disabled: var(--color-white-dark-0);
+  --color-highlight: var(--color-secondary-light-4);
+  --color-selected: var(--color-secondary-light-2);
+
+  --color-elevation-shadow: #{$color-elevation-shadow};
+
+  --color-scrollbar-dark-1: #{darken($color-scrollbar, 10%)};
+  --color-scrollbar: #{$color-scrollbar};
+
+  --color-external-user-main: #{$color-external-user-main};
+  --color-external-user-title: #{$color-font};
+}

@@ -1,0 +1,48 @@
+// centraliza o icone dentro do step
+.ant-steps-icon {
+  .anticon {
+    vertical-align: 0;
+    transform: translateY(-2px);
+  }
+}
+
+// altera a cor da borda do step atual
+.ant-steps-item-process .ant-steps-item-icon {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+// altera a cor da borda dos steps ja percorridos
+.ant-steps-item-finish .ant-steps-item-icon {
+  border-color: var(--color-primary);
+}
+
+// altera a cor da linha que liga os steps ja percorridos
+.ant-steps-item-finish > .ant-steps-item-content > .ant-steps-item-title::after,
+.ant-steps-item-finish > .ant-steps-item-tail::after {
+  background-color: var(--color-primary);
+}
+
+// altera a cor dos icones dos steps ja percorridos
+.ant-steps-item-finish .ant-steps-item-icon > .ant-steps-icon {
+  color: var(--color-primary);
+}
+
+// quando em modo vertical, a linha que liga os steps acaba ficando muito pequena devido
+// a distancia dos steps, que é muito proxima quando há apenas titulo. A definicao de uma
+// altura minima garante que a linha sempre tera um tamanho minimo.
+.ant-steps-vertical > .ant-steps-item {
+  min-height: 70px;
+}
+
+.ant-steps-item-content {
+  width: calc(100% - 48px);
+}
+
+.ant-steps-item-description {
+  width: 100%;
+}
+
+.ant-steps-horizontal:not(.ant-steps-label-vertical) .ant-steps-item-description {
+  max-width: unset;
+}

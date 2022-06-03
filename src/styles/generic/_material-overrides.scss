@@ -1,0 +1,16 @@
+@import '~src/styles/generic/metronic/base/_mixins';
+
+.mat-dialog-container {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  color: var(--color-font) !important;
+}
+
+.cdk-overlay-container {
+  z-index: var(--dropdowns-z-index) !important;
+}
+
+.cdk-drag.cdk-drag-preview {
+  z-index: var(--max-z-index) !important;
+}

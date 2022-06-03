@@ -1,0 +1,50 @@
+@import '~src/styles/settings/index';
+
+.c-accordion {
+  &.m-accordion--toggle-arrow {
+    .c-accordion__item {
+      .c-accordion__item-head {
+        padding: 0 0.5rem;
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        .c-accordion__item-title,
+        .m-accordion__item-mode {
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          color: var(--color-font);
+        }
+
+        .c-accordion__item-title {
+          flex-grow: 9999;
+        }
+      }
+    }
+  }
+
+  &.m-accordion--bordered {
+    .c-accordion__item {
+      .c-accordion__item-body {
+        border-top: none;
+      }
+    }
+  }
+
+  .c-accordion__item {
+    .c-accordion__item-head {
+      padding: 0.5rem;
+
+      .c-accordion__item-title {
+        font-size: 1.1rem;
+      }
+    }
+
+    .c-accordion__item-body {
+      .c-accordion__item-content {
+        padding: 0.5rem;
+      }
+    }
+  }
+}

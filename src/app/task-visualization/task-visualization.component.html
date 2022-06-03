@@ -1,0 +1,82 @@
+<div class="container" id="container">
+    <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" id="taskOpeningForm">
+        <div class="row">
+            <div class="col-6">
+                <div class="card card-padding">
+                    <div class="form-group card-header bg-white card-task-title">
+                        <input class="form-control title" type="title" formControlName="Title" id="title" readonly />
+                    </div>
+                    <div class="form-group card-description">
+                        <label for="description">Descrição</label>
+                        <quill-editor [styles]="editorStyle" 
+                                      [modules]="editorConfig" 
+                                      [readOnly]="true"
+                                      formControlName="Description" 
+                                      id="description" >
+                        </quill-editor>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card card-padding">
+                    <div class="form-group">
+                        <label for="status">Status</label>
+                        <select class="form-control" type="number" formControlName="Status" id="status" required>
+                            <option value=0>Não Iniciado</option>
+                            <option value=1>Em Andamento</option>
+                            <option value=2>Aguardando</option>
+                            <option value=3>Concluído</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="generator">Gerador</label>
+                        <input type="text" class="form-control bg-white" formControlName="Generator" id="generator" readonly/>
+                    </div>
+                    <div class="form-group">
+                        <label for="responsible">Responsável</label>
+                        <input type="text" class="form-control bg-white" formControlName="Responsible" id="responsible" readonly/>
+                    </div>
+                    <div id="error" class="isa_error isa" hidden>
+                        <i class="fa fa-info-circle"></i>
+                        <a id="errorMsg" class="error-text-size"></a>
+                    </div>
+                    <div class="buttons">
+                        <div class="row">
+                            <div class="col-6 align-center">
+                                <button type="submit" class="btn btn-dark btn-style action-buttons">Salvar</button>
+                            </div>
+                            <div class="col-6 align-center">
+                                <button type="button" class="btn btn-dark btn-style action-buttons" (click)="cancel()">Voltar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form> 
+    <div class="card">
+        <div class="card-header bg-white ">
+            <label class="proceeding-title">
+                At<u>ividades</u>
+            </label>
+            <button class="btn btn-dark btn-style float-right" (click)="openProceedingRegister()">
+                Nova atividade
+            </button>
+        </div>
+        <div class="card proceeding-margin" *ngFor="let proceeding of proceedingList">
+            <div class="card-header card-padding bg-white">
+                <label>
+                    #{{ proceeding.sequenceNumber }} - {{ proceeding.generatorName }}
+                </label> 
+                <br>
+                <a>
+                    Registrou em {{ proceeding.createdAt }}
+                </a>
+            </div>
+            <quill-view-html [style]="editorStyle"
+                             [content]="proceeding.descriptionText">
+            </quill-view-html>
+        </div>
+    </div>
+</div>
+

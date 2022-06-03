@@ -1,0 +1,6 @@
+app-time-range {
+  &.ng-invalid.ng-dirty .form-control,
+  &.ng-invalid.display-errors-force-control-error .form-control {
+    border-color: var(--color-danger);
+  }
+}

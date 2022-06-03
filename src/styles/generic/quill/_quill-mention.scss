@@ -1,0 +1,36 @@
+.ql-mention-list-item {
+  cursor: pointer;
+  padding: var(--spacing-xsm);
+  &:hover,
+  &:active {
+    background-color: var(--color-highlight);
+  }
+  &:hover .c-widget-listing__widget-title,
+  &:active .c-widget-listing__widget-title {
+    color: #fff;
+  }
+  outline: none;
+  border: none;
+}
+
+.ql-mention-list-container {
+  border: 1px solid var(--color-secondary-light-4);
+  border-radius: var(--spacing-xxsm);
+  background-color: var(--color-white);
+  z-index: var(--dropdowns-z-index);
+}
+
+.ql-mention-list {
+  padding: 0px;
+  font-family: $default-font-family;
+}
+.mention {
+  background-color: var(--color-highlight);
+  border-radius: 6px;
+  padding-left: var(--spacing-xxxsm);
+  padding-right: var(--spacing-xxxsm);
+  padding-bottom: var(--spacing-xxxsm);
+}
+.ql-mention-list-item.selected {
+  background-color: var(--color-highlight);
+}

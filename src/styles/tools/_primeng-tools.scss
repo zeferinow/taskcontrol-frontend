@@ -1,0 +1,25 @@
+@mixin changeHoverBgColor($component, $color) {
+  // necessário deixar com seletor body para conseguir sobrescrever
+  // o default primeng
+  body {
+    .c-#{$component} {
+      &.ui-#{$component}:not(.ui-state-disabled):hover .ui-#{$component}-label,
+      &.ui-#{$component}:not(.ui-state-disabled):hover .ui-#{$component}-trigger {
+        background-color: #{$color};
+      }
+    }
+  }
+}
+
+@mixin changeFocusBgColor($component, $color) {
+  // necessário deixar com seletor body para conseguir sobrescrever
+  // o default primeng
+  body {
+    .c-#{$component} {
+      &.ui-state-focus .ui-#{$component}-label,
+      &.ui-state-focus .ui-#{$component}-trigger {
+        background-color: #{$color};
+      }
+    }
+  }
+}

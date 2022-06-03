@@ -1,0 +1,12 @@
+app-time-register {
+  & .c-row.ng-invalid.all-line-fields-dirty,
+  &.display-errors-force-control-error .c-row.ng-invalid {
+    app-dropdown .select2-selection {
+      border-color: var(--color-danger);
+    }
+
+    app-calendar .form-control {
+      border-color: var(--color-danger);
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import '~src/styles/settings/index';
+
+.datepicker {
+  direction: ltr !important;
+  z-index: 10 !important;
+  display: block !important;
+  width: 244px !important;
+  font-size: var(--root-mobile-font-size);
+  padding: 0px !important;
+}
+
+.datepicker table tr td,
+.datepicker table tr th {
+  text-align: center !important;
+}
+
+.datepicker .datepicker-switch {
+  cursor: default !important;
+
+  &:hover {
+    background-color: #fff !important;
+  }
+}
+
+.datepicker .next,
+.datepicker .prev,
+.datepicker tfoot tr th {
+  cursor: pointer !important;
+}
+
+.datepicker table tr td.day:hover {
+  background: var(--color-secondary-light-4) !important;
+  cursor: pointer !important;
+}
+
+.datepicker table tr td.today {
+  background-color: var(--color-primary-light-2) !important;
+}
+
+.datepicker table tr td.active {
+  background-color: var(--color-primary) !important;
+}
+
+.datepicker table tr td.today:hover,
+.datepicker table tr td.active:hover {
+  background-color: var(--color-primary-light-2) !important;
+}
+
+.datepicker td,
+.datepicker th {
+  width: 32px;
+  height: 32px;
+}
+
+.datepicker tfoot tr th {
+  height: var(--btn-height-sm);
+}

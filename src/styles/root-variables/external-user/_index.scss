@@ -1,0 +1,24 @@
+:root {
+  --external-user-header-row-height: 75px;
+  --external-user-footer-height: 42px;
+  --page-padding: var(--spacing-gutter);
+  --page-content-height: calc(calc(100vh - var(--navbar-height)) - var(--external-user-footer-height));
+}
+
+@media all and (min-width: 420px) {
+  :root {
+    --page-padding: calc(var(--spacing-gutter) * 4);
+  }
+}
+
+@media (max-width: 685px) {
+  :root {
+    --external-user-header-row-height: 100px;
+  }
+}
+
+@media all and (min-width: 700px) {
+  :root {
+    --page-padding: 10%;
+  }
+}

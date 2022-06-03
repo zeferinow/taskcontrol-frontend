@@ -1,0 +1,95 @@
+@import '~src/styles/settings/index';
+$tooltip-bg-color: #333333;
+$arrow-bg-color: $tooltip-bg-color;
+$arrow-height-width: 5px;
+
+.c-tooltip {
+  z-index: var(--dropdowns-z-index);
+  position: relative;
+  opacity: 1;
+  background-color: $tooltip-bg-color;
+  border-radius: 3px;
+  max-width: 200px;
+  animation: tooltip-in 0.15s ease-in-out;
+}
+
+@keyframes tooltip-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.c-tooltip__inner {
+  color: #fff;
+  font-size: 13px;
+  padding: 0.3rem;
+  text-align: center;
+}
+
+.c-tooltip__arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: $tooltip-bg-color;
+  position: absolute;
+  margin: $arrow-height-width;
+}
+
+.c-tooltip[x-placement^='top'] .c-tooltip__arrow {
+  border-width: $arrow-height-width $arrow-height-width 0 $arrow-height-width;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  bottom: -$arrow-height-width;
+  left: calc(50% - #{$arrow-height-width});
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.c-tooltip[x-placement^='top'] {
+  margin-bottom: $arrow-height-width;
+}
+
+.c-tooltip[x-placement^='right'] .c-tooltip__arrow {
+  border-width: $arrow-height-width $arrow-height-width $arrow-height-width 0;
+  border-left-color: transparent;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  left: -$arrow-height-width;
+  top: calc(50% - #{$arrow-height-width});
+  margin-left: 0;
+  margin-right: 0;
+}
+.c-tooltip[x-placement^='right'] {
+  margin-left: $arrow-height-width;
+}
+
+.c-tooltip[x-placement^='bottom'] .c-tooltip__arrow {
+  border-width: 0 $arrow-height-width $arrow-height-width $arrow-height-width;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  top: -$arrow-height-width;
+  left: calc(50% - #{$arrow-height-width});
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.c-tooltip[x-placement^='bottom'] {
+  margin-top: $arrow-height-width;
+}
+
+.c-tooltip[x-placement^='left'] .c-tooltip__arrow {
+  border-width: $arrow-height-width 0 $arrow-height-width $arrow-height-width;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  right: -$arrow-height-width;
+  top: calc(50% - #{$arrow-height-width});
+  margin-left: 0;
+  margin-right: 0;
+}
+.c-tooltip[x-placement^='left'] {
+  margin-right: $arrow-height-width;
+}

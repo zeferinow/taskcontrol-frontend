@@ -1,0 +1,21 @@
+.ant-timeline-item {
+  padding-bottom: 30px;
+}
+
+.ant-timeline-item-tail {
+  top: 20px;
+  height: calc(100% - 30px);
+  border-width: 3px;
+}
+
+.ant-timeline-item-content {
+  margin-left: 20px;
+}
+
+.ant-timeline-item-head {
+  width: 18px;
+  height: 18px;
+  border-width: 3px;
+  margin-left: -4px;
+  top: -4px;
+}

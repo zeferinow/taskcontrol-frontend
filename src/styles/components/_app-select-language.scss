@@ -1,0 +1,6 @@
+app-select-language.ng-invalid.ng-dirty,
+app-select-language.ng-invalid.display-errors-force-control-error {
+  app-dropdown .select2-selection {
+    border-color: array-get($m--state-colors, danger, base);
+  }
+}

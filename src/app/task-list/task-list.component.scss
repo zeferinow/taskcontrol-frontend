@@ -1,0 +1,63 @@
+td{
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    padding: 6px 8px;
+    width: 40px;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+table{
+    border: 1px solid #dee2e6;
+}
+
+thead{
+    background-color: #dee2e6;
+}
+
+label{
+    cursor: pointer;
+    margin: 0;
+}
+
+button{
+    cursor: pointer;
+    outline: 0px;
+}
+
+.card-header-color{
+    background-color: white;
+    border: 1px solid #dee2e6;
+}
+
+.status-outline{ 
+    border-radius: 15px;
+    border-width: 1.4px;
+    padding: 0.05rem 0.8rem;
+    font-size: 0.8rem;
+    background-color: white;
+    opacity: 0.6;
+}
+
+.status-notstarted{
+    border-color: rgb(255, 21, 21);
+    color: rgb(255, 21, 21);
+}
+.status-waiting{
+    border-color: rgb(255, 153, 0);
+    color: rgb(255, 153, 0);
+}
+.status-inprogress{
+    border-color: rgb(0, 162, 255);
+    color: rgb(0, 162, 255);
+}
+.status-concluded{
+    border-color: rgb(0, 168, 8);
+    color: rgb(0, 168, 8);
+}
+
+.task-list-title{
+    padding: 12px 0px 0px 12px; 
+    font-weight: bold; 
+    font-size:large;
+}

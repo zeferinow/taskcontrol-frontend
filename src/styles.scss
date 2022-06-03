@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import '~quill/dist/quill.snow.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: .5rem;
+    background-color: #fff;
+    margin: 1.25rem 0 1.25rem 0;
+    box-shadow: 0 .25rem .5rem #e6edef;
+
+    .card-head {
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #edf1f7;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+    .card-body {
+        padding: 1rem 1.5rem; 
+    }
+}
+
+.isa{
+    padding:5px 15px;
+    font-size:2em;
+    vertical-align:middle;
+    border-radius:.3em;
+}
+
+.isa_info {
+    color: #00529B;
+    background-color: #BDE5F8;
+}
+.isa_success {
+    color: #4F8A10;
+    background-color: #DFF2BF;
+}
+.isa_warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.isa_error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+.error-text-size{
+    font-size: 0.8rem;
+    vertical-align:middle;
+    margin: 0px 8px;
+}
+
+.card-padding{
+    padding: 15px;
+}
+
+.align-center{
+    text-align: center;
+}
+
+.btn-style{
+    background-color: #302638;
+    border-color: #302638;
+}
+
+.custom-dialog-container .mat-dialog-container {
+    padding: 0px;
+}
+
+.btn-margin{
+    margin-left: 1rem;
+}

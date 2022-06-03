@@ -1,0 +1,45 @@
+.ant-btn {
+  padding: 0 var(--btn-pad-left-right);
+  height: var(--btn-height-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-btn-sm {
+  height: var(--btn-height-sm);
+  font-size: var(--root-font-size);
+}
+
+.ant-btn-lg {
+  height: var(--btn-height-sm);
+  font-size: var(--root-font-size);
+}
+
+.ant-btn-default {
+  color: var(--color-font);
+  border-color: var(--color-border);
+  background-color: var(--color-white);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: var(--color-font);
+    border-color: var(--color-border);
+    background-color: var(--color-white-dark-1);
+  }
+}
+
+.ant-btn-primary {
+  color: #fff;
+  background-color: var(--color-info);
+  border-color: var(--color-info);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: var(--color-info-light-1);
+    border-color: var(--color-info-light-1);
+  }
+}

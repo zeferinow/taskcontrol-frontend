@@ -1,0 +1,11 @@
+.ant-input {
+  &,
+  &:hover {
+    border-color: var(--color-border);
+  }
+  &:focus,
+  &:active {
+    box-shadow: none;
+    border-color: var(--color-primary);
+  }
+}

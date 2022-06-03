@@ -1,0 +1,75 @@
+@import '~src/styles/settings/colors';
+@import '~src/styles/settings/typeface';
+@import '~src/styles/settings/metronic/framework-config';
+@import '~src/styles/generic/metronic/base/_mixins';
+
+.c-modal__border-radius-1 .mat-dialog-container {
+  border-radius: var(--border-radius-1);
+}
+
+.c-modal {
+  --title-font-size: 1.3rem;
+  --default-padding: var(--spacing-gutter);
+  --body-padding: var(--default-padding);
+  --close-btn-font-size: 1.4rem;
+  --header-height: calc(calc(var(--title-font-size) + var(--default-padding)) + var(--default-padding));
+
+  --footer-height: calc(calc(var(--btn-height-md) + var(--default-padding)) + var(--default-padding));
+  --body-max-height: calc(calc(calc(var(--modals-max-height) - var(--footer-height)) - var(--header-height)) - 10px);
+  --body-min-height: calc(calc(var(--modals-min-height) - var(--footer-height)) - var(--header-height));
+
+  position: relative;
+  max-width: var(--modals-max-width);
+  max-height: var(--modals-max-height);
+  min-width: var(--modals-min-width);
+  min-height: var(--modals-min-height);
+  width: 100%;
+}
+
+.c-modal__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-modal__title {
+  font-size: var(--title-font-size);
+  margin: 0;
+  font-family: $default-font-family;
+  padding-right: calc(var(--close-btn-font-size) + var(--default-padding));
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.c-modal__header,
+.c-modal__header--no-title {
+  padding: 0 var(--default-padding);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.c-modal__header {
+  height: var(--header-height);
+  border-bottom: 1px solid var(--color-secondary-light-4);
+}
+
+.c-modal__body {
+  padding: var(--body-padding);
+  width: 100%;
+  max-height: var(--body-max-height);
+  min-height: var(--body-min-height);
+  overflow: auto;
+}
+
+.c-modal__header--no-title + .c-modal__body {
+  min-height: calc(var(--body-min-height) + var(--header-height));
+}
+
+.c-modal__close-btn {
+  position: absolute;
+  right: var(--default-padding);
+  top: var(--default-padding);
+  font-size: var(--close-btn-font-size);
+  cursor: pointer;
+}

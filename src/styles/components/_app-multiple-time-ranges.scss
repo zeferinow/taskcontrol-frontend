@@ -1,0 +1,5 @@
+app-multiple-time-ranges {
+  &.ng-invalid.ng-dirty.c-multiple-time-ranges__required .form-control {
+    border-color: var(--color-danger);
+  }
+}

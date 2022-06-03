@@ -1,0 +1,9 @@
+app-dropdown-tree {
+  outline: none;
+}
+
+.app-dropdown-tree__tree {
+  nz-tree {
+    max-height: 200px;
+  }
+}

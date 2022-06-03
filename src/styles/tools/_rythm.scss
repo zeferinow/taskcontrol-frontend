@@ -1,0 +1,46 @@
+/**
+* Cria classes utilitarias de ritmo. Casos comuns sao para margin e padding.
+* Classes no padrão u-attr[t|l|b|r]-[0...10]
+* Exemplo de classes criadas:
+* .u-m-1, .u-mt-1, .u-pb-1.
+*/
+@mixin createRythmClasses($attr, $name) {
+  $start-val: 0.7rem;
+  $multiplier: 0.4;
+  $sides: (
+    't': 'top',
+    'l': 'left',
+    'b': 'bottom',
+    'r': 'right'
+  );
+
+  @for $i from 0 through 10 {
+    $val: $start-val * ($multiplier * $i);
+
+    @if $i == 0 {
+      $val: 0;
+    }
+
+    @if $i == 1 {
+      $val: $start-val;
+    }
+
+    .u-#{$name}-#{$i} {
+      #{$attr}: $val !important;
+    }
+
+    // t - l - b - r
+    @each $current-side, $current-side-extense in $sides {
+      .u-#{$name}#{$current-side}-#{$i} {
+        #{$attr}-#{$current-side-extense}: $val !important;
+      }
+    }
+
+    // owl
+    @each $current-side, $current-side-extense in $sides {
+      .u-owl-#{$name}#{$current-side}-#{$i} + .u-owl-#{$name}#{$current-side}-#{$i} {
+        #{$attr}-#{$current-side-extense}: $val !important;
+      }
+    }
+  }
+}
