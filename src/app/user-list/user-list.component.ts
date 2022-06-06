@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { Router } from '@angular/router';
 import { user } from 'src/backend';
 import { UserService } from 'src/backend/api/user.service';
+import { UserRegisterComponent } from '../user-register/user-register.component';
 import { UserVisualizationComponent } from '../user-visualization/user-visualization.component';
 
 @Component({
@@ -15,7 +17,8 @@ export class UserListComponent implements OnInit {
 
   constructor(
     private userService: UserService,
-    private dialogRef: MatDialog
+    private dialogRef: MatDialog,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -35,6 +38,13 @@ export class UserListComponent implements OnInit {
     this.dialogRef.open(UserVisualizationComponent, { 
       data: user,
       panelClass: 'custom-dialog-container' 
+    });
+    this.router.navigate([`user/${user.userId}`]);
+  }
+
+  userRegister(){
+    this.dialogRef.open(UserRegisterComponent, {
+      panelClass: 'custom-dialog-container'
     });
   }
 }

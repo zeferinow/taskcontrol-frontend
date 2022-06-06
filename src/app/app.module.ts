@@ -27,6 +27,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { UserVisualizationComponent } from './user-visualization/user-visualization.component';
 import { TextMaskModule } from 'angular2-text-mask';
 import { IConfig, NgxMaskModule } from 'ngx-mask';
+import { UserRegisterComponent } from './user-register/user-register.component';
 
 export var options: Partial<IConfig> | (() => Partial<IConfig>);
 
@@ -48,7 +49,8 @@ export var options: Partial<IConfig> | (() => Partial<IConfig>);
     TaskVisualizationComponent,
     ProceedingRegisterComponent,
     UserListComponent,
-    UserVisualizationComponent
+    UserVisualizationComponent,
+    UserRegisterComponent
     //CreateAccountComponent,
   ],
   imports: [
@@ -66,7 +68,8 @@ export var options: Partial<IConfig> | (() => Partial<IConfig>);
   bootstrap: [AppComponent],
   entryComponents: [
     ProceedingRegisterComponent,
-    UserVisualizationComponent
+    UserVisualizationComponent,
+    UserRegisterComponent
   ]
 })
 export class AppModule { }

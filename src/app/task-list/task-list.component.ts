@@ -44,7 +44,6 @@ export class TaskListComponent implements OnInit {
   }
 
   taskVisualization(task){
-    console.log(task);
     this.router.navigate([`task/${task.taskId}`]);
   }
 }

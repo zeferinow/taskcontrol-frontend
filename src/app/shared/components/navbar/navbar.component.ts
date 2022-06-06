@@ -18,7 +18,6 @@ export class NavbarComponent implements OnInit {
 
     async ngOnInit() {
         const verification = await this.userService.getIsUserAdmin();
-        console.log(verification);
 
         if(verification){
             document.getElementById('config').hidden = false;

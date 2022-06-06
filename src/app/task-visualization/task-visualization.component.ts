@@ -18,7 +18,7 @@ export class TaskVisualizationComponent implements OnInit {
     toolbar: false
   }
   editorStyle={
-    height: '195px',
+    height: '157px',
     backgroundColor: 'white',
     borderRadius: '4px'
   }
@@ -48,7 +48,6 @@ export class TaskVisualizationComponent implements OnInit {
     this.subscription = this.route.paramMap.subscribe(
       params => {
         const id = params.get('id');
-
         this.getTask(id);
       }
     );
@@ -65,13 +64,8 @@ export class TaskVisualizationComponent implements OnInit {
     if(this.taskForm){
       this.taskForm.reset();
     }
-
     this.task = task;
-
-    console.log(this.task)
-
     this.getProceedingList();
-
     this.taskForm.patchValue({
       Title: "#" + this.task.sequenceNumber + " - " + this.task.title,
       Status: this.task.status,
@@ -107,7 +101,6 @@ export class TaskVisualizationComponent implements OnInit {
     this.proceedingService.getProceedingList(this.task.taskId).subscribe(
       proceedingList => {
         this.proceedingList = proceedingList;
-        console.log(this.proceedingList);
       }
     );
   }

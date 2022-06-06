@@ -39,7 +39,6 @@ export class LoginComponent implements OnInit {
       // navego para a rota vazia novamente
       this.router.navigate(['']);
     } catch (error) {
-      console.error(error);
       this.alertService.error(error);
     }
   }

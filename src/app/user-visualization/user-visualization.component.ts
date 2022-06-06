@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 import { Router } from '@angular/router';
 import { UserService } from 'src/backend/api/user.service';
+import Swal from 'sweetalert2';
 import { AlertService } from '../core/services/alert.service';
 
 @Component({
@@ -36,8 +37,11 @@ export class UserVisualizationComponent implements OnInit {
     this.user.Password = data.password,
     this.user.Email = data.email,
     this.user.Cpf = data.cpf,
-    this.user.Phone = data.phone
-    this.user.UserId = data.userId
+    this.user.Phone = data.phone,
+    this.user.UserId = data.userId,
+    dialogRef.backdropClick().subscribe(() => {
+      this.defaultRoute();
+    })
   }
 
   ngOnInit() {
@@ -56,8 +60,7 @@ export class UserVisualizationComponent implements OnInit {
       if(this.userForm.valid){
         this.addUserValueAttribution();
         await this.userService.updateUser(this.user);
-        this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
-        this.router.navigate(['/user']));
+        this.defaultRoute();
         this.dialogRef.close([]);
       } else {
         throw 'Favor preencher os campos requeridos.';
@@ -70,7 +73,24 @@ export class UserVisualizationComponent implements OnInit {
 
   async removeUser(){
     try{
-      await this.userService.updateUser(this.user.UserId);
+      Swal.fire({
+        title: 'Tem certeza que deseja excluir esta conta?',
+        text: "Caso o usuário esteja sob controle de alguma tarefa, ela não podera ser reassumida por outra pessoa!",
+        icon: 'question',
+        showCancelButton: true,
+        confirmButtonColor: '#302638',
+        cancelButtonColor: '#d33',
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Excluir conta',
+        focusConfirm: false,
+        focusCancel: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.userService.deleteUser(this.user.UserId);
+          this.defaultRoute();
+          this.dialogRef.close([]);
+        }
+      })
     }
     catch (error) {
       this.alertService.error(error);
@@ -84,5 +104,10 @@ export class UserVisualizationComponent implements OnInit {
     this.user.Email = this.userForm.value.Email;
     this.user.Cpf = this.userForm.value.Cpf;
     this.user.Phone = this.userForm.value.Phone;
+  }
+
+  defaultRoute(){
+    this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
+        this.router.navigate(['/user']));
   }
 }

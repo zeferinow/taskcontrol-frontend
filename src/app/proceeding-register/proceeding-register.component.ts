@@ -60,7 +60,7 @@ export class ProceedingRegisterComponent implements OnInit {
         this.addProceedingValueAttribution();
         await this.proceedingRegister.addProceeding(this.addProceeding);
         this.router.navigateByUrl('/', {skipLocationChange: true}).then(()=>
-this.router.navigate([`task/${this.taskId}`]));
+        this.router.navigate([`task/${this.taskId}`]));
         this.dialogRef.close([]);
       } else {
         throw 'Favor preencher todos os campos.';

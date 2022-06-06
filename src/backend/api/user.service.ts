@@ -24,8 +24,16 @@ export class UserService {
         return result;
     }
 
+    async addUser(user : any){
+        return this.http.post<any>(`${environment.apiUrl}/api/user`, user).toPromise();
+    }
+
     async updateUser(user : any){
         return this.http.put<any>(`${environment.apiUrl}/api/user`, user).toPromise();
+    }
+
+    async deleteUser(userId : any){
+        return this.http.delete<string>(`${environment.apiUrl}/api/user/${userId}`).toPromise();
     }
 
     private handleError(error){

@@ -25,7 +25,8 @@ export const routes: Routes = [
       { path: 'user', 
         children: [
           { path: '', redirectTo: 'list', pathMatch: 'full'},
-          { path: 'list', component: UserListComponent}
+          { path: 'list', component: UserListComponent},
+          { path: ':id', component: UserListComponent}
         ]
       }
     ],
